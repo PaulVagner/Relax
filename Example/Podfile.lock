@@ -1,0 +1,20 @@
+PODS:
+  - Encodable (1.0.0):
+    - Inlinit (~> 0.1)
+  - Inlinit (0.1.2)
+  - Relax (0.1.1):
+    - Encodable (~> 1.0.0)
+
+DEPENDENCIES:
+  - Relax (from `../`)
+
+EXTERNAL SOURCES:
+  Relax:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Encodable: ef3db73a859d522ea0138fea147462ba9fab573a
+  Inlinit: 6016cbe884ee0a239607246737a668012074700e
+  Relax: 38c840131a85fe7253adc7ed30ffe36e3f6ed8dc
+
+COCOAPODS: 0.39.0
