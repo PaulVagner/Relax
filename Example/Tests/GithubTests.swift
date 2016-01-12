@@ -9,7 +9,7 @@
 import XCTest
 import Relax
 
-class Tests: XCTestCase {
+class GithubTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,11 +21,6 @@ class Tests: XCTestCase {
             
         }
     
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
     }
     
     func testUserNameRequest() {

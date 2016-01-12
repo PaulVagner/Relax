@@ -38,7 +38,6 @@ public class GithubAPI: StarterAPI, API {
             
             return [
                 
-                
                 .Users : Endpoint(path: "users", method: .GET),
                 .User : Endpoint(path: "user", method: .GET, requiresUser: true),
                 .UserUpdate : Endpoint(path: "user", method: .PATCH, requiresUser: true),

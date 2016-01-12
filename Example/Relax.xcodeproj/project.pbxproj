@@ -16,6 +16,7 @@
 		607FACEC1AFB9204008FA782 /* GithubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* GithubTests.swift */; };
 		A951A9051C45344A0037CDF1 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976A7991C44BDF8008AFA87 /* Keys.swift */; };
 		A951A9071C4536930037CDF1 /* ItunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9061C4536930037CDF1 /* ItunesTests.swift */; };
+		A951A9331C4565290037CDF1 /* FoursquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9321C4565290037CDF1 /* FoursquareTests.swift */; };
 		A976A79A1C44BDF8008AFA87 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976A7991C44BDF8008AFA87 /* Keys.swift */; };
 		E95756E50C792DC152A2D511 /* Pods_Relax_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED5F6F96CB536E84E422A92 /* Pods_Relax_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		94A79BA233E7DA3D2A9451C2 /* Pods-Relax_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relax_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relax_Example/Pods-Relax_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A951A9061C4536930037CDF1 /* ItunesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesTests.swift; sourceTree = "<group>"; };
 		A951A9081C453DEA0037CDF1 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
+		A951A9321C4565290037CDF1 /* FoursquareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTests.swift; sourceTree = "<group>"; };
 		A976A7991C44BDF8008AFA87 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keys.swift; path = Relax/Keys.swift; sourceTree = "<group>"; };
 		CD9D9E06EE081D7CB629A952 /* Pods_Relax_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Relax_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26AEFCFB7650721EF394925 /* Pods-Relax_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relax_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Relax_Example/Pods-Relax_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A951A9321C4565290037CDF1 /* FoursquareTests.swift */,
 				607FACEB1AFB9204008FA782 /* GithubTests.swift */,
 				A951A9061C4536930037CDF1 /* ItunesTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -378,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A951A9331C4565290037CDF1 /* FoursquareTests.swift in Sources */,
 				A951A9071C4536930037CDF1 /* ItunesTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* GithubTests.swift in Sources */,
 				A951A9051C45344A0037CDF1 /* Keys.swift in Sources */,

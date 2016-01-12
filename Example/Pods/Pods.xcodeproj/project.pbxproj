@@ -25,19 +25,19 @@
 		92E02B717607B0C5E0FCC7AF6DE27278 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90A8B94876AFB9523C42430521A33F9 /* Foundation.framework */; };
 		9CD13457DFF1778A2A4214266A72F676 /* Pods-Relax_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B2D99B1759BA6B0B28BC7115347E131 /* Pods-Relax_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D66FB2F894BA6F7856256FA21BBC04E /* Relax-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 223933B7AED9E0820B1FB93B819209F9 /* Relax-dummy.m */; };
-		A951A90B1C4543800037CDF1 /* FoursquareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A90A1C4543800037CDF1 /* FoursquareAPI.swift */; };
-		A951A90D1C45438D0037CDF1 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A90C1C45438D0037CDF1 /* TwitterAPI.swift */; };
-		A951A90F1C4543960037CDF1 /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A90E1C4543960037CDF1 /* MarvelAPI.swift */; };
-		A951A9111C4545EA0037CDF1 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9101C4545EA0037CDF1 /* InstagramAPI.swift */; };
-		A951A9131C4547610037CDF1 /* UberAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9121C4547610037CDF1 /* UberAPI.swift */; };
-		A951A9151C4547B80037CDF1 /* SlackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9141C4547B80037CDF1 /* SlackAPI.swift */; };
-		A951A9171C4547F10037CDF1 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9161C4547F10037CDF1 /* FlickrAPI.swift */; };
-		A951A9191C45488B0037CDF1 /* LinkedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9181C45488B0037CDF1 /* LinkedIn.swift */; };
-		A951A91B1C4549C40037CDF1 /* MeetupAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A91A1C4549C40037CDF1 /* MeetupAPI.swift */; };
-		A951A91D1C454A020037CDF1 /* PinterestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A91C1C454A020037CDF1 /* PinterestAPI.swift */; };
-		A951A91F1C454A4A0037CDF1 /* YoutubeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A91E1C454A4A0037CDF1 /* YoutubeAPI.swift */; };
-		A951A9221C454AD90037CDF1 /* GoogleAnalyticsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9211C454AD90037CDF1 /* GoogleAnalyticsAPI.swift */; };
-		A951A9241C454E9B0037CDF1 /* GoogleMapsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9231C454E9B0037CDF1 /* GoogleMapsAPI.swift */; };
+		A951A9251C4564510037CDF1 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9161C4547F10037CDF1 /* FlickrAPI.swift */; };
+		A951A9261C4564510037CDF1 /* FoursquareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A90A1C4543800037CDF1 /* FoursquareAPI.swift */; };
+		A951A9271C4564510037CDF1 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9101C4545EA0037CDF1 /* InstagramAPI.swift */; };
+		A951A9281C4564510037CDF1 /* LinkedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9181C45488B0037CDF1 /* LinkedIn.swift */; };
+		A951A9291C4564510037CDF1 /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A90E1C4543960037CDF1 /* MarvelAPI.swift */; };
+		A951A92A1C4564510037CDF1 /* MeetupAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A91A1C4549C40037CDF1 /* MeetupAPI.swift */; };
+		A951A92B1C4564510037CDF1 /* PinterestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A91C1C454A020037CDF1 /* PinterestAPI.swift */; };
+		A951A92C1C4564510037CDF1 /* SlackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9141C4547B80037CDF1 /* SlackAPI.swift */; };
+		A951A92D1C4564510037CDF1 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A90C1C45438D0037CDF1 /* TwitterAPI.swift */; };
+		A951A92E1C4564510037CDF1 /* UberAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9121C4547610037CDF1 /* UberAPI.swift */; };
+		A951A92F1C4564510037CDF1 /* YoutubeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A91E1C454A4A0037CDF1 /* YoutubeAPI.swift */; };
+		A951A9301C4564510037CDF1 /* GoogleAnalyticsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9211C454AD90037CDF1 /* GoogleAnalyticsAPI.swift */; };
+		A951A9311C4564510037CDF1 /* GoogleMapsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9231C454E9B0037CDF1 /* GoogleMapsAPI.swift */; };
 		A976A7981C44A51F008AFA87 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976A7961C44A4BC008AFA87 /* GithubAPI.swift */; };
 		AA4DD1AAE356F29132A55FCEF11DBED5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90A8B94876AFB9523C42430521A33F9 /* Foundation.framework */; };
 		C04FB730DFAAC54D71EE3B7FFB1ABE6C /* Pods-Relax_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FB59AC99B6FDD716BB70A6118B9D3 /* Pods-Relax_Example-dummy.m */; };
@@ -818,22 +818,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				238B53F17AB352594F30A9FBF101FA1C /* Encodable-dummy.m in Sources */,
-				A951A9151C4547B80037CDF1 /* SlackAPI.swift in Sources */,
-				A951A9221C454AD90037CDF1 /* GoogleAnalyticsAPI.swift in Sources */,
-				A951A90B1C4543800037CDF1 /* FoursquareAPI.swift in Sources */,
-				A951A91B1C4549C40037CDF1 /* MeetupAPI.swift in Sources */,
 				22408D5C7C738CD2967CD51010F7646E /* Encodable.swift in Sources */,
 				3CC26308E36F806678F4237E1E8C37FB /* Savable.swift in Sources */,
-				A951A9241C454E9B0037CDF1 /* GoogleMapsAPI.swift in Sources */,
-				A951A90D1C45438D0037CDF1 /* TwitterAPI.swift in Sources */,
-				A951A91F1C454A4A0037CDF1 /* YoutubeAPI.swift in Sources */,
-				A951A9131C4547610037CDF1 /* UberAPI.swift in Sources */,
-				A951A9191C45488B0037CDF1 /* LinkedIn.swift in Sources */,
-				A951A9111C4545EA0037CDF1 /* InstagramAPI.swift in Sources */,
-				A951A90F1C4543960037CDF1 /* MarvelAPI.swift in Sources */,
-				A951A9171C4547F10037CDF1 /* FlickrAPI.swift in Sources */,
 				7A1D701B054A48DF175279AF84AA4717 /* Serializable.swift in Sources */,
-				A951A91D1C454A020037CDF1 /* PinterestAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,13 +828,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A951A9301C4564510037CDF1 /* GoogleAnalyticsAPI.swift in Sources */,
 				E1C5FCB85B1D8FFB9B948FF58F4E0AE3 /* API.swift in Sources */,
+				A951A9271C4564510037CDF1 /* InstagramAPI.swift in Sources */,
+				A951A9261C4564510037CDF1 /* FoursquareAPI.swift in Sources */,
+				A951A92A1C4564510037CDF1 /* MeetupAPI.swift in Sources */,
+				A951A9291C4564510037CDF1 /* MarvelAPI.swift in Sources */,
 				35B7415532FE1FB03FE39C14BF4BD33E /* Defaultable.swift in Sources */,
+				A951A92F1C4564510037CDF1 /* YoutubeAPI.swift in Sources */,
 				F15D2739115D9D5A9CFC75C6F4EEE674 /* Endpoint.swift in Sources */,
 				8B892B665CD2CD700F0DE51147DF87BB /* ItunesAPI.swift in Sources */,
+				A951A92D1C4564510037CDF1 /* TwitterAPI.swift in Sources */,
 				9D66FB2F894BA6F7856256FA21BBC04E /* Relax-dummy.m in Sources */,
 				A976A7981C44A51F008AFA87 /* GithubAPI.swift in Sources */,
+				A951A9281C4564510037CDF1 /* LinkedIn.swift in Sources */,
+				A951A9311C4564510037CDF1 /* GoogleMapsAPI.swift in Sources */,
+				A951A92C1C4564510037CDF1 /* SlackAPI.swift in Sources */,
 				3C463A3210FF7412E4A12529486278A2 /* Relax.swift in Sources */,
+				A951A9251C4564510037CDF1 /* FlickrAPI.swift in Sources */,
+				A951A92B1C4564510037CDF1 /* PinterestAPI.swift in Sources */,
+				A951A92E1C4564510037CDF1 /* UberAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,7 @@ public class Relax {
         let query = api.authToken.isEmpty ? endpoint.query.isEmpty ? "?" + keys : endpoint.query + "&" + keys : endpoint.query
         let full = api.baseURL + endpoint.path + query
         
-//        print(full)
+        
         
         guard let url = NSURL(string: full) else { return completion(info: nil, error: NSURLError.BadURL) }
         
