@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A976A79A1C44BDF8008AFA87 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976A7991C44BDF8008AFA87 /* Keys.swift */; };
 		E95756E50C792DC152A2D511 /* Pods_Relax_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED5F6F96CB536E84E422A92 /* Pods_Relax_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		94A79BA233E7DA3D2A9451C2 /* Pods-Relax_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relax_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relax_Example/Pods-Relax_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A976A7991C44BDF8008AFA87 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		CD9D9E06EE081D7CB629A952 /* Pods_Relax_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Relax_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26AEFCFB7650721EF394925 /* Pods-Relax_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relax_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Relax_Example/Pods-Relax_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA4C02C45FDF1091636C720 /* Relax.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Relax.podspec; path = ../Relax.podspec; sourceTree = "<group>"; };
@@ -93,11 +95,9 @@
 		607FACD21AFB9204008FA782 /* Example for Relax */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				A976A7991C44BDF8008AFA87 /* Keys.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for Relax";
@@ -108,6 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				A976A79A1C44BDF8008AFA87 /* Keys.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

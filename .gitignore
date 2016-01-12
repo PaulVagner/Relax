@@ -33,3 +33,5 @@ Carthage
 # Pods/
 
 Relax.podspec
+
+Example/Relax/Keys.swift
