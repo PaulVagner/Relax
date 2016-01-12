@@ -10,6 +10,7 @@
 
 import Foundation
 import Encodable
+import Inlinit
 
 
 public typealias Parameters = [String:AnyObject]
@@ -23,13 +24,23 @@ public enum Method: String {
 
 public struct Endpoint {
     
-    public var path: String
-    public var method: Method
+    public var path: String!
+    public var pathpieces: [String:String] = [:] {
+        
+        didSet {
+            
+            for (k,v) in pathpieces { path = path.stringByReplacingOccurrencesOfString(":" + k, withString: v) }
+            
+        }
+        
+    }
+    
+    public var method: Method!
     public var parameters: Parameters = [:]
     
-    public var url: String {
+    public var query: String {
         
-        return method == .GET && parameters.count > 0 ? path + "?" + parameters.flatten("&") { "\($0)=\($1)" } : path
+        return method == .GET && parameters.count > 0 ? "?" + parameters.flatten("&") { "\($0)=\($1)" } : ""
         
     }
     
@@ -38,8 +49,7 @@ public struct Endpoint {
     
     public var satisfied: Bool {
         
-        for parameter in requiredParameters { guard parameters[parameter] != nil else { return false } }
-        return true
+        for parameter in requiredParameters { guard parameters[parameter] != nil else { return false } }; return true
         
     }
     
@@ -93,5 +103,4 @@ public extension CollectionType {
     }
     
 }
-
 

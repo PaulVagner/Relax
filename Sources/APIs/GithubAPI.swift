@@ -12,27 +12,27 @@ import Foundation
 
 // Documentation : https://developer.github.com/v3/
 
-public struct GithubAPI: API {
+public class GithubAPI: StarterAPI, API {
+    
+    public static var session = GithubAPI()
     
     public var baseURL: String = "https://api.github.com/"
     
-    public var clientKey: String?
-    public var clientSecret: String?
-    public var authHeader: String? = "Authorization"
-    
-    public var token: String? {
+    public var authBasic: [String:String] = [:]
+    public var authHeader: String = "Authorization"
+    public var authToken: String {
         
-        get { return load("GithubToken") }
+        get { return load("GithubToken") ?? "" }
         set { save("GithubToken",newValue) }
         
     }
     
-    enum Endpoints: String {
+    public enum Endpoints: String {
         
         case Users, User, UserUpdate, UserName
         case SearchRepos, SearchCode, SearchIssues, SearchUsers
         
-        var raw: Endpoint { return _endpoints[self]! }
+        public var endpoint: Endpoint { return _endpoints[self]! }
         
         var _endpoints: [Endpoints:Endpoint] {
             

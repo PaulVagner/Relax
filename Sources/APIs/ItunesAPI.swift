@@ -12,26 +12,26 @@ import Foundation
 
 // Documentation : https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html
 
-public struct ItunesAPI: API {
+public class ItunesAPI: StarterAPI, API {
+    
+    public static var session = ItunesAPI()
     
     public var baseURL: String = "https://itunes.apple.com/"
     
-    public var clientKey: String?
-    public var clientSecret: String?
-    public var authHeader: String?
-    
-    public var token: String? {
+    public var authBasic: [String:String] = [:]
+    public var authHeader: String = ""
+    public var authToken: String {
         
-        get { return load("ItunesToken") }
+        get { return load("ItunesToken") ?? "" }
         set { save("ItunesToken",newValue) }
         
     }
     
-    enum Endpoints: String {
+    public enum Endpoints: String {
         
         case Search, Lookup
         
-        var raw: Endpoint { return _endpoints[self]! }
+        public var endpoint: Endpoint { return _endpoints[self]! }
         
         var _endpoints: [Endpoints:Endpoint] {
             
