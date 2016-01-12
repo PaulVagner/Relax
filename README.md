@@ -5,6 +5,34 @@
 [![License](https://img.shields.io/cocoapods/l/Relax.svg?style=flat)](http://cocoapods.org/pods/Relax)
 [![Platform](https://img.shields.io/cocoapods/p/Relax.svg?style=flat)](http://cocoapods.org/pods/Relax)
 
+## Needs
+
+> This library will need a lot of management to keep APIs updated. My plan is to start laying them out and try to find others who use specific APIs and have them keep those up to date.
+
+## Roadmap
+
+- [ ] [Flickr](https://www.flickr.com/services/api/)
+- [ ] [Foursquare](https://developer.foursquare.com)
+- [ ] [Github](https://developer.github.com/v3/)
+- [ ] [Instagram](https://www.instagram.com/developer/)
+- [x] [Itunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
+- [ ] [LinkedIn](https://developer.linkedin.com/docs)
+- [ ] [Marvel](http://developer.marvel.com)
+- [ ] [Meetup](http://www.meetup.com/meetup_api/)
+- [ ] [Pinterest](https://developers.pinterest.com)
+- [ ] [Slack](https://api.slack.com)
+- [ ] [Twitter](https://dev.twitter.com/overview/documentation)
+- [ ] [Uber](https://developer.uber.com)
+- [ ] [Youtube](https://developers.google.com/youtube/)
+
+---
+
+- [Google Products](https://developers.google.com/products/)
+	- [ ] [Analytics](https://developers.google.com/analytics/)
+	- [ ] [Maps](https://developers.google.com/maps/)
+- [Facebook Products](https://developers.facebook.com/docs/)
+	- [ ] [Graph API](https://developers.facebook.com/docs/graph-api)
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -72,6 +100,8 @@ GithubAPI.session.start {
             
 }
 ```
+
+> You will need to [register an application](https://github.com/settings/applications/new). Then create a Keys.swift file (make sure to ignore the file if your repo is public).
 
 **run a request**
 
