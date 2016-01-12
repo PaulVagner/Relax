@@ -47,6 +47,7 @@
 		607FACEB1AFB9204008FA782 /* GithubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTests.swift; sourceTree = "<group>"; };
 		94A79BA233E7DA3D2A9451C2 /* Pods-Relax_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relax_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relax_Example/Pods-Relax_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A951A9061C4536930037CDF1 /* ItunesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesTests.swift; sourceTree = "<group>"; };
+		A951A9081C453DEA0037CDF1 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		A976A7991C44BDF8008AFA87 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keys.swift; path = Relax/Keys.swift; sourceTree = "<group>"; };
 		CD9D9E06EE081D7CB629A952 /* Pods_Relax_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Relax_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26AEFCFB7650721EF394925 /* Pods-Relax_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relax_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Relax_Example/Pods-Relax_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				A976A7991C44BDF8008AFA87 /* Keys.swift */,
+				A951A9081C453DEA0037CDF1 /* Package.swift */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for Relax */,
 				607FACE81AFB9204008FA782 /* Tests */,

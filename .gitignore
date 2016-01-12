@@ -32,6 +32,11 @@ Carthage
 #
 # Pods/
 
+.build/
+Packages/
+
 Relax.podspec
 
-Example/Relax/Keys.swift
+_Pods.xcodeproj
+
+Keys.swift

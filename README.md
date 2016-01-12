@@ -108,9 +108,22 @@ it, simply add the following line to your Podfile:
 pod "Relax"
 ```
 
+Relax is also available through [Swift Package Manager](https://swift.org/package-manager/). Please take a look at the link to learn more about how to use SwiftPM.
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "YOUR_PACKAGE_NAME",
+    dependencies: [
+        .Package(url: "https://github.com/joalbright/Relax.git", majorVersion: 0)
+    ]
+)
+```
+
 ## Author
 
-Jo Albright, me@jo2.co
+[Jo Albright](https://github.com/joalbright)
 
 ## License
 
