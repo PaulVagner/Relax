@@ -11,6 +11,8 @@
 
 ## Roadmap
 
+#### APIs
+
 - [ ] [Flickr](https://www.flickr.com/services/api/)
 - [ ] [Foursquare](https://developer.foursquare.com)
 - [ ] [Github](https://developer.github.com/v3/)
@@ -32,6 +34,11 @@
 	- [ ] [Maps](https://developers.google.com/maps/)
 - [Facebook Products](https://developers.facebook.com/docs/)
 	- [ ] [Graph API](https://developers.facebook.com/docs/graph-api)
+
+#### Features
+
+- [ ] Response Object Structure (still dreaming this up)
+- [ ] AlamoFire Support
 
 ## Usage
 
@@ -68,7 +75,6 @@ class GithubAPI: StarterAPI, API {
             
             return [
                 
-                
                 .Users : Endpoint(path: "users", method: .GET),
                 .User : Endpoint(path: "user", method: .GET, requiresUser: true),
                 .UserUpdate : Endpoint(path: "user", method: .PATCH, requiresUser: true),
@@ -84,6 +90,16 @@ class GithubAPI: StarterAPI, API {
         }
         
     }
+    
+    /*
+    // uncomment to overwrite built in NSURLSession request (ex: to use AlamoFire)
+
+    public func request(endpoint: Endpoint, response: Response) {
+        
+        // your custom request... then call response when it finishes
+        
+    }
+    */
 
 }
 ```
