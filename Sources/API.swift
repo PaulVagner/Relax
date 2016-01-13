@@ -15,6 +15,7 @@ import Inlinit
 public protocol API: Defaultable, Inlinit {
     
     var baseURL: String { get set }
+    var authURL: String { get set }
     
     var authBasic: [String:String] { get set }
     var authHeader: String { get set }

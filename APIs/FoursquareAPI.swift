@@ -18,6 +18,7 @@ public class FoursquareAPI: StarterAPI, API {
     public static var session = FoursquareAPI()
     
     public var baseURL: String = "https://api.foursquare.com/v2/"
+    public var authURL: String = ""
     
     public var authBasic: [String:String] = ["v":"20160112"]
     public var authHeader: String = "Authorization"

@@ -18,6 +18,7 @@ public class ItunesAPI: StarterAPI, API {
     public static var session = ItunesAPI()
     
     public var baseURL: String = "https://itunes.apple.com/"
+    public var authURL: String = ""
     
     public var authBasic: [String:String] = [:]
     public var authHeader: String = ""

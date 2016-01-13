@@ -125,12 +125,12 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				A98CE6741C461D380089323F /* APIs */,
 				A976A7991C44BDF8008AFA87 /* Keys.swift */,
+				A98CE6741C461D380089323F /* APIs */,
+				607FACE81AFB9204008FA782 /* Tests */,
 				A951A9081C453DEA0037CDF1 /* Package.swift */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for Relax */,
-				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				CFDDAB8A72270A785B812344 /* Pods */,
 				771EC0933E66C0EFBAC7C1CD /* Frameworks */,
@@ -206,9 +206,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A97595D31C4637CD00DD55B4 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
 		A98CE6741C461D380089323F /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				A97595D31C4637CD00DD55B4 /* Facebook */,
 				A98CE6751C461D380089323F /* FlickrAPI.swift */,
 				A98CE6761C461D380089323F /* FoursquareAPI.swift */,
 				A98CE6771C461D380089323F /* GithubAPI.swift */,

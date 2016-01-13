@@ -24,32 +24,31 @@ public enum Method: String {
 
 public struct Endpoint {
     
+    // Set on creation.
+    
     public var path: String!
-    public var pathpieces: [String:String] = [:] {
-        
-        didSet {
-            
-            for (k,v) in pathpieces { path = path.stringByReplacingOccurrencesOfString(":" + k, withString: v) }
-            
-        }
-        
-    }
-    
     public var method: Method!
-    public var parameters: Parameters = [:]
-    
-    public var query: String {
-        
-        return method == .GET && parameters.count > 0 ? "?" + parameters.flatten("&") { "\($0)=\($1)" } : ""
-        
-    }
-    
-    public var requiresUser: Bool = false
     public var requiredParameters: [String] = []
+    public var requiresUser: Bool = false
+    
+    // Set when creating request.
+    
+    public var pathpieces: [String:String] = [:] { didSet { for (k,v) in pathpieces { path = path.replace(":" + k, v) } } }
+    public var parameters: Parameters = [:]
+    public var query: String { return method == .GET && parameters.count > 0 ? "?" + parameters.flatten("&") { "\($0)=\($1)" } : "" }
     
     public var satisfied: Bool {
         
-        for parameter in requiredParameters { guard parameters[parameter] != nil else { return false } }; return true
+        for parameter in requiredParameters {
+            
+            // TODO: Add split by "," and test if at least one of the values is satisfied
+            // "," denotes this or that is required
+            
+            guard parameters[parameter] != nil else { return false }
+        
+        }
+        
+        return true
         
     }
     
@@ -60,24 +59,6 @@ public struct Endpoint {
         
     }
     
-    public init(path: String, method: Method = .GET, parameters: Parameters) {
-        
-        self.path = path
-        self.method = method
-        self.parameters = parameters
-        
-    }
-    
-    public init(path: String, method: Method = .GET, parameters: Parameters, requiredParameters: [String]) {
-        
-        self.path = path
-        self.method = method
-        self.parameters = parameters
-        self.requiredParameters = requiredParameters
-        
-    }
-    
-    
     public init(path: String, method: Method = .GET, requiredParameters: [String]) {
         
         self.path = path
@@ -85,17 +66,6 @@ public struct Endpoint {
         self.requiredParameters = requiredParameters
         
     }
-    
-    public init(path: String, method: Method = .GET, parameters: Parameters, requiredParameters: [String], requiresUser: Bool) {
-        
-        self.path = path
-        self.method = method
-        self.parameters = parameters
-        self.requiredParameters = requiredParameters
-        self.requiresUser = requiresUser
-        
-    }
-    
     
     public init(path: String, method: Method = .GET, requiredParameters: [String], requiresUser: Bool) {
         
@@ -106,21 +76,21 @@ public struct Endpoint {
         
     }
     
-    
-    public init(path: String, method: Method = .GET, parameters: Parameters, requiresUser: Bool) {
-        
-        self.path = path
-        self.method = method
-        self.parameters = parameters
-        self.requiresUser = requiresUser
-        
-    }
-    
     public init(path: String, method: Method = .GET, requiresUser: Bool) {
         
         self.path = path
         self.method = method
         self.requiresUser = requiresUser
+        
+    }
+    
+}
+
+public extension String {
+    
+    public func replace(s1: String, _ s2: String) -> String {
+        
+        return self.stringByReplacingOccurrencesOfString(s1, withString: s2)
         
     }
     

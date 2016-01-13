@@ -18,6 +18,7 @@ public class GithubAPI: StarterAPI, API {
     public static var session = GithubAPI()
     
     public var baseURL: String = "https://api.github.com/"
+    public var authURL: String = ""
     
     public var authBasic: [String:String] = [:]
     public var authHeader: String = "Authorization"
