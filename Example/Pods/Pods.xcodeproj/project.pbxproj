@@ -21,24 +21,9 @@
 		5AFE57176A69A41E6B1AD7FDCF3DF4B9 /* Relax.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 918AB97502265326BA336D68C0915469 /* Relax.bundle */; };
 		74D550CAFD24FB7F1AB916105CBFC23C /* Pods-Relax_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1667553B7B7815E7745187A753E02D06 /* Pods-Relax_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A1D701B054A48DF175279AF84AA4717 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19BDE6E6FF69F5A016B2AB5384FE4E /* Serializable.swift */; };
-		8B892B665CD2CD700F0DE51147DF87BB /* ItunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379675FA8DBE077CBD305273458CE7D2 /* ItunesAPI.swift */; };
 		92E02B717607B0C5E0FCC7AF6DE27278 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90A8B94876AFB9523C42430521A33F9 /* Foundation.framework */; };
 		9CD13457DFF1778A2A4214266A72F676 /* Pods-Relax_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B2D99B1759BA6B0B28BC7115347E131 /* Pods-Relax_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D66FB2F894BA6F7856256FA21BBC04E /* Relax-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 223933B7AED9E0820B1FB93B819209F9 /* Relax-dummy.m */; };
-		A951A9251C4564510037CDF1 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9161C4547F10037CDF1 /* FlickrAPI.swift */; };
-		A951A9261C4564510037CDF1 /* FoursquareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A90A1C4543800037CDF1 /* FoursquareAPI.swift */; };
-		A951A9271C4564510037CDF1 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9101C4545EA0037CDF1 /* InstagramAPI.swift */; };
-		A951A9281C4564510037CDF1 /* LinkedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9181C45488B0037CDF1 /* LinkedIn.swift */; };
-		A951A9291C4564510037CDF1 /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A90E1C4543960037CDF1 /* MarvelAPI.swift */; };
-		A951A92A1C4564510037CDF1 /* MeetupAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A91A1C4549C40037CDF1 /* MeetupAPI.swift */; };
-		A951A92B1C4564510037CDF1 /* PinterestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A91C1C454A020037CDF1 /* PinterestAPI.swift */; };
-		A951A92C1C4564510037CDF1 /* SlackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9141C4547B80037CDF1 /* SlackAPI.swift */; };
-		A951A92D1C4564510037CDF1 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A90C1C45438D0037CDF1 /* TwitterAPI.swift */; };
-		A951A92E1C4564510037CDF1 /* UberAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9121C4547610037CDF1 /* UberAPI.swift */; };
-		A951A92F1C4564510037CDF1 /* YoutubeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A91E1C454A4A0037CDF1 /* YoutubeAPI.swift */; };
-		A951A9301C4564510037CDF1 /* GoogleAnalyticsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9211C454AD90037CDF1 /* GoogleAnalyticsAPI.swift */; };
-		A951A9311C4564510037CDF1 /* GoogleMapsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9231C454E9B0037CDF1 /* GoogleMapsAPI.swift */; };
-		A976A7981C44A51F008AFA87 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976A7961C44A4BC008AFA87 /* GithubAPI.swift */; };
 		AA4DD1AAE356F29132A55FCEF11DBED5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90A8B94876AFB9523C42430521A33F9 /* Foundation.framework */; };
 		C04FB730DFAAC54D71EE3B7FFB1ABE6C /* Pods-Relax_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FB59AC99B6FDD716BB70A6118B9D3 /* Pods-Relax_Example-dummy.m */; };
 		DA89518D372E924FE3F6B1BF19AF843C /* Encodable.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B564C197F13C41A86F0BE8209C01E62B /* Encodable.bundle */; };
@@ -154,7 +139,6 @@
 		2B269A2AC4BECC7F4C87B3870022E5C4 /* Pods-Relax_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Relax_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2BDE1439209D1DA264239ECCDA863505 /* Encodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Encodable.swift; path = Sources/Encodable.swift; sourceTree = "<group>"; };
 		313BF2F3894DBE2189828927E874C32F /* Inlinit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Inlinit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		379675FA8DBE077CBD305273458CE7D2 /* ItunesAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ItunesAPI.swift; sourceTree = "<group>"; };
 		3D7DF68C538D93CAEDB87E10B3CF26EE /* Relax-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Relax-prefix.pch"; sourceTree = "<group>"; };
 		41D46E92A720588970751F3823F29D77 /* Pods-Relax_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Relax_Example-frameworks.sh"; sourceTree = "<group>"; };
 		4B1C07502D23D1DA425C0716B3B8BD21 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -175,20 +159,6 @@
 		9B2D99B1759BA6B0B28BC7115347E131 /* Pods-Relax_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Relax_Example-umbrella.h"; sourceTree = "<group>"; };
 		9BB352EDD389760E07910A6109D61A87 /* Savable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Savable.swift; path = Sources/Savable.swift; sourceTree = "<group>"; };
 		A49816AA87647445AA6044D5BFE427E6 /* Pods-Relax_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Relax_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		A951A90A1C4543800037CDF1 /* FoursquareAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareAPI.swift; sourceTree = "<group>"; };
-		A951A90C1C45438D0037CDF1 /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
-		A951A90E1C4543960037CDF1 /* MarvelAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
-		A951A9101C4545EA0037CDF1 /* InstagramAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
-		A951A9121C4547610037CDF1 /* UberAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberAPI.swift; sourceTree = "<group>"; };
-		A951A9141C4547B80037CDF1 /* SlackAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackAPI.swift; sourceTree = "<group>"; };
-		A951A9161C4547F10037CDF1 /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
-		A951A9181C45488B0037CDF1 /* LinkedIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedIn.swift; sourceTree = "<group>"; };
-		A951A91A1C4549C40037CDF1 /* MeetupAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetupAPI.swift; sourceTree = "<group>"; };
-		A951A91C1C454A020037CDF1 /* PinterestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestAPI.swift; sourceTree = "<group>"; };
-		A951A91E1C454A4A0037CDF1 /* YoutubeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeAPI.swift; sourceTree = "<group>"; };
-		A951A9211C454AD90037CDF1 /* GoogleAnalyticsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAnalyticsAPI.swift; path = Google/GoogleAnalyticsAPI.swift; sourceTree = "<group>"; };
-		A951A9231C454E9B0037CDF1 /* GoogleMapsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleMapsAPI.swift; path = Google/GoogleMapsAPI.swift; sourceTree = "<group>"; };
-		A976A7961C44A4BC008AFA87 /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
 		A9FB2A9C183795981B0486895C46C06E /* Inlinit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Inlinit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE78A631F827C0A8A32C4FD73462DA48 /* Inlinit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Inlinit.xcconfig; sourceTree = "<group>"; };
 		B564C197F13C41A86F0BE8209C01E62B /* Encodable.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Encodable.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,7 +266,6 @@
 				89AA19791FDEDBC1B302BFB10170B8DF /* Defaultable.swift */,
 				CED8723FFC8B0FCF5FA1B21B381C8D24 /* Endpoint.swift */,
 				C0B2F2628E7E5D6B160478CC4C8E5E88 /* Relax.swift */,
-				45F460163AA8DE87F64CEA063FC749F5 /* APIs */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -329,27 +298,6 @@
 				E26C43257CEB49FC1CADDA4507ED3F3B /* Pods-Relax_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		45F460163AA8DE87F64CEA063FC749F5 /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-				A951A9161C4547F10037CDF1 /* FlickrAPI.swift */,
-				A951A90A1C4543800037CDF1 /* FoursquareAPI.swift */,
-				A976A7961C44A4BC008AFA87 /* GithubAPI.swift */,
-				A951A9101C4545EA0037CDF1 /* InstagramAPI.swift */,
-				379675FA8DBE077CBD305273458CE7D2 /* ItunesAPI.swift */,
-				A951A9181C45488B0037CDF1 /* LinkedIn.swift */,
-				A951A90E1C4543960037CDF1 /* MarvelAPI.swift */,
-				A951A91A1C4549C40037CDF1 /* MeetupAPI.swift */,
-				A951A91C1C454A020037CDF1 /* PinterestAPI.swift */,
-				A951A9141C4547B80037CDF1 /* SlackAPI.swift */,
-				A951A90C1C45438D0037CDF1 /* TwitterAPI.swift */,
-				A951A9121C4547610037CDF1 /* UberAPI.swift */,
-				A951A91E1C454A4A0037CDF1 /* YoutubeAPI.swift */,
-				A951A9201C454AA40037CDF1 /* Google */,
-			);
-			path = APIs;
 			sourceTree = "<group>";
 		};
 		62FA32D5884F3CCCDDADECC338162F9F /* Support Files */ = {
@@ -392,15 +340,6 @@
 				E90A8B94876AFB9523C42430521A33F9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		A951A9201C454AA40037CDF1 /* Google */ = {
-			isa = PBXGroup;
-			children = (
-				A951A9211C454AD90037CDF1 /* GoogleAnalyticsAPI.swift */,
-				A951A9231C454E9B0037CDF1 /* GoogleMapsAPI.swift */,
-			);
-			name = Google;
 			sourceTree = "<group>";
 		};
 		AE5A310D6160E4FAFEA377002CAF43D8 /* Inlinit */ = {
@@ -828,26 +767,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A951A9301C4564510037CDF1 /* GoogleAnalyticsAPI.swift in Sources */,
 				E1C5FCB85B1D8FFB9B948FF58F4E0AE3 /* API.swift in Sources */,
-				A951A9271C4564510037CDF1 /* InstagramAPI.swift in Sources */,
-				A951A9261C4564510037CDF1 /* FoursquareAPI.swift in Sources */,
-				A951A92A1C4564510037CDF1 /* MeetupAPI.swift in Sources */,
-				A951A9291C4564510037CDF1 /* MarvelAPI.swift in Sources */,
 				35B7415532FE1FB03FE39C14BF4BD33E /* Defaultable.swift in Sources */,
-				A951A92F1C4564510037CDF1 /* YoutubeAPI.swift in Sources */,
 				F15D2739115D9D5A9CFC75C6F4EEE674 /* Endpoint.swift in Sources */,
-				8B892B665CD2CD700F0DE51147DF87BB /* ItunesAPI.swift in Sources */,
-				A951A92D1C4564510037CDF1 /* TwitterAPI.swift in Sources */,
 				9D66FB2F894BA6F7856256FA21BBC04E /* Relax-dummy.m in Sources */,
-				A976A7981C44A51F008AFA87 /* GithubAPI.swift in Sources */,
-				A951A9281C4564510037CDF1 /* LinkedIn.swift in Sources */,
-				A951A9311C4564510037CDF1 /* GoogleMapsAPI.swift in Sources */,
-				A951A92C1C4564510037CDF1 /* SlackAPI.swift in Sources */,
 				3C463A3210FF7412E4A12529486278A2 /* Relax.swift in Sources */,
-				A951A9251C4564510037CDF1 /* FlickrAPI.swift in Sources */,
-				A951A92B1C4564510037CDF1 /* PinterestAPI.swift in Sources */,
-				A951A92E1C4564510037CDF1 /* UberAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

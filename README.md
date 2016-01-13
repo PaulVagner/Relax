@@ -1,4 +1,5 @@
 # Relax
+RESTful API endpoint manager
 
 <!--[![CI Status](http://img.shields.io/travis/Jo Albright/Relax.svg?style=flat)](https://travis-ci.org/Jo Albright/Relax)-->
 [![Version](https://img.shields.io/cocoapods/v/Relax.svg?style=flat)](http://cocoapods.org/pods/Relax)

@@ -1,5 +1,5 @@
 //
-//  GoogleMapsAPI.swift
+//  MeetupAPI.swift
 //  Relax
 //
 //  Created by Jo Albright on 1/12/16.
@@ -8,6 +8,7 @@
 
 
 import Foundation
+import Relax
 
 
-// Documentation : https://developers.google.com/maps/
+// Documentation : http://www.meetup.com/meetup_api/

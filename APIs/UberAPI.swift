@@ -1,5 +1,5 @@
 //
-//  InstagramAPI.swift
+//  UberAPI.swift
 //  Relax
 //
 //  Created by Jo Albright on 1/12/16.
@@ -8,6 +8,7 @@
 
 
 import Foundation
+import Relax
 
 
-// Documentation : https://www.instagram.com/developer/
+// Documentation : https://developer.uber.com

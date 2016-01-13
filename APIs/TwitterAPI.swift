@@ -1,5 +1,5 @@
 //
-//  MarvelAPI.swift
+//  TwitterAPI.swift
 //  Relax
 //
 //  Created by Jo Albright on 1/12/16.
@@ -8,6 +8,7 @@
 
 
 import Foundation
+import Relax
 
 
-// Documentation : http://developer.marvel.com
+// Documentation : https://dev.twitter.com/overview/documentation

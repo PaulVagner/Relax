@@ -17,7 +17,7 @@ public protocol Defaultable { }
 
 extension Defaultable {
     
-    func load<T>(k: String) -> T? { return _d.objectForKey(k) as? T }
-    func save<T>(k: String, _ v: T) { _d.setObject(v as? AnyObject, forKey: k) }
+    public func load<T>(k: String) -> T? { return _d.objectForKey(k) as? T }
+    public func save<T>(k: String, _ v: T) { _d.setObject(v as? AnyObject, forKey: k) }
     
 }

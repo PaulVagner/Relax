@@ -1,5 +1,5 @@
 //
-//  PinterestAPI.swift
+//  GoogleAnalyticsAPI.swift
 //  Relax
 //
 //  Created by Jo Albright on 1/12/16.
@@ -8,6 +8,7 @@
 
 
 import Foundation
+import Relax
 
 
-// Documentation : https://developers.pinterest.com
+// Documentation : https://developers.google.com/analytics/

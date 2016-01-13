@@ -8,6 +8,7 @@
 
 
 import Foundation
+import Relax
 
 
 // Documentation : https://developer.github.com/v3/

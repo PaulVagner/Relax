@@ -1,5 +1,5 @@
 //
-//  TwitterAPI.swift
+//  SlackAPI.swift
 //  Relax
 //
 //  Created by Jo Albright on 1/12/16.
@@ -8,6 +8,7 @@
 
 
 import Foundation
+import Relax
 
 
-// Documentation : https://dev.twitter.com/overview/documentation
+// Documentation : https://api.slack.com

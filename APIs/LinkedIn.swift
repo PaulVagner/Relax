@@ -1,5 +1,5 @@
 //
-//  FlickerAPI.swift
+//  LinkedIn.swift
 //  Relax
 //
 //  Created by Jo Albright on 1/12/16.
@@ -8,6 +8,7 @@
 
 
 import Foundation
+import Relax
 
 
-// Documentation : https://www.flickr.com/services/api/
+// Documentation : https://developer.linkedin.com/docs

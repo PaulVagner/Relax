@@ -1,5 +1,5 @@
 //
-//  SlackAPI.swift
+//  GoogleMapsAPI.swift
 //  Relax
 //
 //  Created by Jo Albright on 1/12/16.
@@ -8,6 +8,7 @@
 
 
 import Foundation
+import Relax
 
 
-// Documentation : https://api.slack.com
+// Documentation : https://developers.google.com/maps/

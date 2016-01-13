@@ -8,6 +8,7 @@
 
 
 import Foundation
+import Relax
 
 
 // Documentation : https://developer.foursquare.com
@@ -18,7 +19,7 @@ public class FoursquareAPI: StarterAPI, API {
     
     public var baseURL: String = "https://api.foursquare.com/v2/"
     
-    public var authBasic: [String:String] = [:]
+    public var authBasic: [String:String] = ["v":"20160112"]
     public var authHeader: String = "Authorization"
     public var authToken: String {
         
