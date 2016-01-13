@@ -38,8 +38,8 @@ public class ItunesAPI: StarterAPI, API {
             
             return [
                 
-                .Search : Endpoint(path: "search", method: .GET),
-                .Lookup : Endpoint(path: "lookup", method: .GET)
+                .Search : Endpoint(path: "search"),
+                .Lookup : Endpoint(path: "lookup")
                 
             ]
             

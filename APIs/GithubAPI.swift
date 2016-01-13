@@ -39,15 +39,15 @@ public class GithubAPI: StarterAPI, API {
             
             return [
                 
-                .Users : Endpoint(path: "users", method: .GET),
-                .User : Endpoint(path: "user", method: .GET, requiresUser: true),
+                .Users : Endpoint(path: "users"),
+                .User : Endpoint(path: "user", requiresUser: true),
                 .UserUpdate : Endpoint(path: "user", method: .PATCH, requiresUser: true),
-                .UserName : Endpoint(path: "users/:username", method: .GET),
+                .UserName : Endpoint(path: "users/:username"),
                     
-                .SearchRepos : Endpoint(path: "search/repositories", method: .GET),
-                .SearchCode : Endpoint(path: "search/code", method: .GET),
-                .SearchIssues : Endpoint(path: "search/issues", method: .GET),
-                .SearchUsers : Endpoint(path: "search/users", method: .GET)
+                .SearchRepos : Endpoint(path: "search/repositories"),
+                .SearchCode : Endpoint(path: "search/code"),
+                .SearchIssues : Endpoint(path: "search/issues"),
+                .SearchUsers : Endpoint(path: "search/users")
                 
             ]
             

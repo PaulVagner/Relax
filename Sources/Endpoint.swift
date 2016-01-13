@@ -53,7 +53,14 @@ public struct Endpoint {
         
     }
     
-    public init(path: String, method: Method, parameters: Parameters = [:]) {
+    public init(path: String, method: Method = .GET) {
+        
+        self.path = path
+        self.method = method
+        
+    }
+    
+    public init(path: String, method: Method = .GET, parameters: Parameters) {
         
         self.path = path
         self.method = method
@@ -61,7 +68,7 @@ public struct Endpoint {
         
     }
     
-    public init(path: String, method: Method, parameters: Parameters, requiredParameters: [String]) {
+    public init(path: String, method: Method = .GET, parameters: Parameters, requiredParameters: [String]) {
         
         self.path = path
         self.method = method
@@ -70,7 +77,16 @@ public struct Endpoint {
         
     }
     
-    public init(path: String, method: Method, parameters: Parameters, requiredParameters: [String], requiresUser: Bool) {
+    
+    public init(path: String, method: Method = .GET, requiredParameters: [String]) {
+        
+        self.path = path
+        self.method = method
+        self.requiredParameters = requiredParameters
+        
+    }
+    
+    public init(path: String, method: Method = .GET, parameters: Parameters, requiredParameters: [String], requiresUser: Bool) {
         
         self.path = path
         self.method = method
@@ -81,11 +97,29 @@ public struct Endpoint {
     }
     
     
-    public init(path: String, method: Method, parameters: Parameters = [:], requiresUser: Bool) {
+    public init(path: String, method: Method = .GET, requiredParameters: [String], requiresUser: Bool) {
+        
+        self.path = path
+        self.method = method
+        self.requiredParameters = requiredParameters
+        self.requiresUser = requiresUser
+        
+    }
+    
+    
+    public init(path: String, method: Method = .GET, parameters: Parameters, requiresUser: Bool) {
         
         self.path = path
         self.method = method
         self.parameters = parameters
+        self.requiresUser = requiresUser
+        
+    }
+    
+    public init(path: String, method: Method = .GET, requiresUser: Bool) {
+        
+        self.path = path
+        self.method = method
         self.requiresUser = requiresUser
         
     }

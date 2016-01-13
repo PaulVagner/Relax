@@ -61,7 +61,7 @@ class GithubTests: XCTestCase {
         
         var profile = GithubAPI.Endpoints.SearchUsers.endpoint
         
-        profile.pathpieces = ["q" : "joalbright"]
+        profile.parameters = ["q" : "joalbright"]
         
         // run request
         
