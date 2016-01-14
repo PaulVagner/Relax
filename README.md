@@ -14,11 +14,21 @@ RESTful API endpoint manager
 
 #### APIs
 
+- [x] ~~Done~~
+- [ ] ***Started***
+- [ ] API : [Docs]() *documentation link*
+- [ ] API : [File]() *repo file*
+- [ ] API : [Lead Name]() *lead contributer* 
+
+**Please submit an issue if you would like a lead position for any (listed/unlisted) API**
+
+--- 
+
 - [ ] Flickr : [Docs](https://www.flickr.com/services/api/)
-- [x] ~~Foursquare~~ : [Docs](https://developer.foursquare.com)
-- [ ] Github : [Docs](https://developer.github.com/v3/)
+- [x] ~~Foursquare~~ : [Docs](https://developer.foursquare.com) : [Jo Albright](https://github.com/joalbright)
+- [ ] ***Github*** : [Docs](https://developer.github.com/v3/)
 - [ ] Instagram : [Docs](https://www.instagram.com/developer/)
-- [x] ~~Itunes~~ : [Docs](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
+- [x] ~~Itunes~~ : [Docs](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) : [Jo Albright](https://github.com/joalbright)
 - [ ] LinkedIn : [Docs](https://developer.linkedin.com/docs)
 - [ ] Marvel : [Docs](http://developer.marvel.com)
 - [ ] Meetup : [Docs](http://www.meetup.com/meetup_api/)
@@ -28,13 +38,13 @@ RESTful API endpoint manager
 - [ ] Uber : [Docs](https://developer.uber.com)
 - [ ] Youtube : [Docs](https://developers.google.com/youtube/)
 
----
-
 - [Google Products](https://developers.google.com/products/)
 	- [ ] Analytics : [Docs](https://developers.google.com/analytics/)
 	- [ ] Maps : [Docs](https://developers.google.com/maps/)
 - [Facebook Products](https://developers.facebook.com/docs/)
 	- [ ] Graph API : [Docs](https://developers.facebook.com/docs/graph-api)
+
+**Please submit an issue for any APIs you would like to see added.**
 
 #### Features
 
