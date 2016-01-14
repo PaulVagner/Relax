@@ -17,7 +17,6 @@ RESTful API endpoint manager
 - [x] ~~Done~~
 - [ ] ***Started***
 - [ ] API : [Docs]() *documentation link*
-- [ ] API : [File]() *repo file*
 - [ ] API : [Lead Name]() *lead contributer* 
 
 **Please submit an issue if you would like a lead position for any (listed/unlisted) API**
