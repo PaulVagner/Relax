@@ -15,7 +15,7 @@ RESTful API endpoint manager
 #### APIs
 
 - [ ] [Flickr](https://www.flickr.com/services/api/)
-- [ ] [Foursquare](https://developer.foursquare.com)
+- [x] [Foursquare](https://developer.foursquare.com)
 - [ ] [Github](https://developer.github.com/v3/)
 - [ ] [Instagram](https://www.instagram.com/developer/)
 - [x] [Itunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)

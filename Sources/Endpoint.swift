@@ -59,6 +59,14 @@ public struct Endpoint {
         
     }
     
+    public init(path: String, method: Method = .GET, requiresUser: Bool) {
+        
+        self.path = path
+        self.method = method
+        self.requiresUser = requiresUser
+        
+    }
+    
     public init(path: String, method: Method = .GET, requiredParameters: [String]) {
         
         self.path = path
@@ -72,14 +80,6 @@ public struct Endpoint {
         self.path = path
         self.method = method
         self.requiredParameters = requiredParameters
-        self.requiresUser = requiresUser
-        
-    }
-    
-    public init(path: String, method: Method = .GET, requiresUser: Bool) {
-        
-        self.path = path
-        self.method = method
         self.requiresUser = requiresUser
         
     }
