@@ -14,33 +14,33 @@ RESTful API endpoint manager
 
 #### APIs
 
-- [ ] [Flickr](https://www.flickr.com/services/api/)
-- [x] [Foursquare](https://developer.foursquare.com)
-- [ ] [Github](https://developer.github.com/v3/)
-- [ ] [Instagram](https://www.instagram.com/developer/)
-- [x] [Itunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
-- [ ] [LinkedIn](https://developer.linkedin.com/docs)
-- [ ] [Marvel](http://developer.marvel.com)
-- [ ] [Meetup](http://www.meetup.com/meetup_api/)
-- [ ] [Pinterest](https://developers.pinterest.com)
-- [ ] [Slack](https://api.slack.com)
-- [ ] [Twitter](https://dev.twitter.com/overview/documentation)
-- [ ] [Uber](https://developer.uber.com)
-- [ ] [Youtube](https://developers.google.com/youtube/)
+- [ ] Flickr : [Docs](https://www.flickr.com/services/api/)
+- [x] ~~Foursquare~~ : [Docs](https://developer.foursquare.com)
+- [ ] Github : [Docs](https://developer.github.com/v3/)
+- [ ] Instagram : [Docs](https://www.instagram.com/developer/)
+- [x] ~~Itunes~~ : [Docs](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
+- [ ] LinkedIn : [Docs](https://developer.linkedin.com/docs)
+- [ ] Marvel : [Docs](http://developer.marvel.com)
+- [ ] Meetup : [Docs](http://www.meetup.com/meetup_api/)
+- [ ] Pinterest : [Docs](https://developers.pinterest.com)
+- [ ] Slack : [Docs](https://api.slack.com)
+- [ ] Twitter : [Docs](https://dev.twitter.com/overview/documentation)
+- [ ] Uber : [Docs](https://developer.uber.com)
+- [ ] Youtube : [Docs](https://developers.google.com/youtube/)
 
 ---
 
 - [Google Products](https://developers.google.com/products/)
-	- [ ] [Analytics](https://developers.google.com/analytics/)
-	- [ ] [Maps](https://developers.google.com/maps/)
+	- [ ] Analytics : [Docs](https://developers.google.com/analytics/)
+	- [ ] Maps : [Docs](https://developers.google.com/maps/)
 - [Facebook Products](https://developers.facebook.com/docs/)
-	- [ ] [Graph API](https://developers.facebook.com/docs/graph-api)
+	- [ ] Graph API : [Docs](https://developers.facebook.com/docs/graph-api)
 
 #### Features
 
 - [ ] Response Object Structure (still dreaming this up)
 - [ ] Authentication System
-- [ ] AlamoFire Support
+- [ ] AlamoFire Support (other?)
 
 ## Usage
 
