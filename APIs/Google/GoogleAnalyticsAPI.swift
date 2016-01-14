@@ -12,3 +12,32 @@ import Relax
 
 
 // Documentation : https://developers.google.com/analytics/
+
+public class GoogleAnalyticsAPI: StarterAPI {
+    
+    public enum Endpoints: String {
+        
+        // Auth
+        
+        case Auth, AuthCode
+        
+        
+        
+        public var endpoint: Endpoint { return _endpoints[self]! }
+        
+        var _endpoints: [Endpoints:Endpoint] {
+            
+            return [
+                
+                // Auth
+                
+                .Auth : Endpoint(path: "authenticate", requiredParameters: ["client_id","response_type","redirect_uri"]),
+                .AuthCode : Endpoint(path: "access_token", requiredParameters: ["client_id","client_secret","grant_type","redirect_uri","code"]),
+                
+            ]
+            
+        }
+        
+    }
+    
+}

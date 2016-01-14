@@ -15,17 +15,15 @@ class InstagramTests: XCTestCase {
         
         InstagramAPI.session.start {
             
-            $0.authBasic["client_id"] = FOURSQUARE_CLIENT_KEY
-            $0.authBasic["client_secret"] = FOURSQUARE_CLIENT_SECRET
+            $0.authBasic["client_id"] = INSTAGRAM_CLIENT_ID
+            $0.authBasic["client_secret"] = INSTAGRAM_CLIENT_SECRET
             
             $0.baseURL = "https://api.instagram.com/v1/"
             $0.authURL = "https://api.instagram.com/oauth/"
             $0.authBasic = ["access_token":"ACCESS_TOKEN"]
             $0.authHeader = "Authorization"
             $0.authTokenKey = "Instagram"
-        
-            
-            
+           
         }
         
     }

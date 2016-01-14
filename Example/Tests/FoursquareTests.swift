@@ -18,7 +18,7 @@ class FoursquareTests: XCTestCase {
         
         FoursquareAPI.session.start {
             
-            $0.authBasic["client_id"] = FOURSQUARE_CLIENT_KEY
+            $0.authBasic["client_id"] = FOURSQUARE_CLIENT_ID
             $0.authBasic["client_secret"] = FOURSQUARE_CLIENT_SECRET
             
             $0.baseURL = "https://api.foursquare.com/v2/"

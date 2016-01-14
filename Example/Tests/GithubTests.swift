@@ -16,7 +16,7 @@ class GithubTests: XCTestCase {
 
         GithubAPI.session.start {
             
-            $0.authBasic["client_id"] = GITHUB_CLIENT_KEY
+            $0.authBasic["client_id"] = GITHUB_CLIENT_ID
             $0.authBasic["client_secret"] = GITHUB_CLIENT_SECRET
             
             $0.baseURL = "https://api.github.com/"
