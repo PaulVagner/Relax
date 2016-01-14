@@ -1,12 +1,16 @@
-source 'https://github.com/CocoaPods/Specs.git'
+source "https://github.com/CocoaPods/Specs.git"
 use_frameworks!
 
-target 'Relax_Example', :exclusive => true do
+target "Relax_Example", :exclusive => true do
+    
   pod "Relax", :path => "../"
+  pod "Alamofire", "~> 3.0"
+  
 end
 
-target 'Relax_Tests', :exclusive => true do
+target "Relax_Tests", :exclusive => true do
+    
   pod "Relax", :path => "../"
+  pod "Alamofire", "~> 3.0"
 
-  
 end

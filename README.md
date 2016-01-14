@@ -38,6 +38,8 @@ RESTful API endpoint manager
 - [ ] Uber : [Docs](https://developer.uber.com)
 - [ ] Youtube : [Docs](https://developers.google.com/youtube/)
 
+**API Groups**
+
 - [Google Products](https://developers.google.com/products/)
 	- [ ] Analytics : [Docs](https://developers.google.com/analytics/)
 	- [ ] Maps : [Docs](https://developers.google.com/maps/)
@@ -61,57 +63,87 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ```swift
 // Documentation : https://developer.github.com/v3/
 
-class GithubAPI: StarterAPI, API {
+public class GithubAPI: StarterAPI {
     
-    static var session = GithubAPI()
-    
-    var baseURL: String = "https://api.github.com/"
-    
-    var authBasic: [String:String] = [:]
-    var authHeader: String = "Authorization"
-    var authToken: String {
+    public enum Endpoints: String {
         
-        get { return load("GithubToken") ?? "" }
-        set { save("GithubToken",newValue) }
+        // Auth
         
-    }
-    
-    enum Endpoints: String {
-                
-        case Users, User, UserUpdate, UserName
+        case Auth, AuthCode
+        
+        // Gists
+        
+        case Gists, GistsUser, GistsMe, GistsMeStarred, Gist, GistRevision, GistCreate, GistEdit, GistDelete, GistCommits, GistCheck, GistStar, GistUnstar, GistFork, GistForks    
+            
+        // Search
+        
         case SearchRepos, SearchCode, SearchIssues, SearchUsers
         
-        var endpoint: Endpoint { return _endpoints[self]! }
+        // User
+        
+        case Users, UsersNamed, UsersMe, UsersMeUpdate, UsersMeEmails, UsersMeEmailsAdd, UsersMeEmailsDelete, UsersFollowers, UsersMeFollowers, UsersFollowing, UsersMeFollowing, UsersFollowingUserCheck, UsersMeFollowingUserCheck, UsersMeFollowUser, UsersMeUnfollowUser
+        
+        
+        
+        public var endpoint: Endpoint { return _endpoints[self]! }
         
         var _endpoints: [Endpoints:Endpoint] {
             
             return [
                 
-                .Users : Endpoint(path: "users", method: .GET),
-                .User : Endpoint(path: "user", method: .GET, requiresUser: true),
-                .UserUpdate : Endpoint(path: "user", method: .PATCH, requiresUser: true),
-                .UserName : Endpoint(path: "users/:username", method: .GET),
-                    
-                .SearchRepos : Endpoint(path: "search/repositories", method: .GET),
-                .SearchCode : Endpoint(path: "search/code", method: .GET),
-                .SearchIssues : Endpoint(path: "search/issues", method: .GET),
-                .SearchUsers : Endpoint(path: "search/users", method: .GET)
+                // Auth
+                
+                .Auth : Endpoint(path: "authorize", requiredParameters: ["client_id","redirect_uri","state"]),
+                .AuthCode : Endpoint(path: "access_token", requiredParameters: ["client_id","client_secret","code","redirect_uri","state"]),
+             
+                // Gists
+                
+                .Gists : Endpoint(path: "gists/public"),
+                .GistsUser : Endpoint(path: "users/:username/gists"),
+                .GistsMe : Endpoint(path: "gists", requiresUser: true),
+                .GistsMeStarred : Endpoint(path: "gists/starred", requiresUser: true),
+                .Gist : Endpoint(path: "gists/:id"),
+                .GistRevision : Endpoint(path: "gists/:id/:sha"),
+                .GistCreate : Endpoint(path: "gists", method: .POST, requiresUser: true),
+                .GistEdit : Endpoint(path: "gists/:id", method: .PATCH, requiresUser: true),
+                .GistDelete : Endpoint(path: "gists/:id", method: .DELETE, requiresUser: true),
+                .GistCommits : Endpoint(path: "gists/:id/commits"),
+                .GistCheck : Endpoint(path: "gists/:id/star", requiresUser: true),
+                .GistStar : Endpoint(path: "gists/:id/star", method: .PUT, requiresUser: true),
+                .GistUnstar : Endpoint(path: "gists/:id/star", method: .DELETE, requiresUser: true),
+                .GistFork : Endpoint(path: "gists/:id/forks", method: .POST, requiresUser: true),
+                .GistForks : Endpoint(path: "gists/:id/forks"),
+                
+                // Search
+                
+                .SearchRepos : Endpoint(path: "search/repositories"),
+                .SearchCode : Endpoint(path: "search/code"),
+                .SearchIssues : Endpoint(path: "search/issues"),
+                .SearchUsers : Endpoint(path: "search/users"),
+                
+                // User
+                
+                .Users : Endpoint(path: "users"),
+                .UsersNamed : Endpoint(path: "users/:username"),
+                .UsersMe : Endpoint(path: "user", requiresUser: true),
+                .UsersMeUpdate : Endpoint(path: "user", method: .PATCH, requiresUser: true),
+                .UsersMeEmails : Endpoint(path: "user/emails", requiresUser: true),
+                .UsersMeEmailsAdd : Endpoint(path: "user/emails", method: .POST, requiresUser: true),
+                .UsersMeEmailsDelete : Endpoint(path: "user/emails", method: .DELETE, requiresUser: true),
+                .UsersFollowers : Endpoint(path: "users/:username/followers"),
+                .UsersMeFollowers : Endpoint(path: "user/followers", requiresUser: true),
+                .UsersFollowing : Endpoint(path: "users/:username/following"),
+                .UsersMeFollowing : Endpoint(path: "user/following", requiresUser: true),
+                .UsersFollowingUserCheck : Endpoint(path: "users/:username/following/:target_user"),
+                .UsersMeFollowingUserCheck : Endpoint(path: "user/following/:username", requiresUser: true),
+                .UsersMeFollowUser : Endpoint(path: "user/following/:username", method: .PUT, requiresUser: true),
+                .UsersMeUnfollowUser : Endpoint(path: "user/following/:username", method: .DELETE, requiresUser: true)
                 
             ]
             
         }
         
     }
-    
-    /*
-    // uncomment to overwrite built in NSURLSession request (ex: to use AlamoFire)
-
-    public func request(endpoint: Endpoint, response: Response) {
-        
-        // your custom request... then call response when it finishes
-        
-    }
-    */
 
 }
 ```
@@ -125,7 +157,12 @@ GithubAPI.session.start {
             
     $0.authBasic["client_id"] = GITHUB_CLIENT_KEY
     $0.authBasic["client_secret"] = GITHUB_CLIENT_SECRET
-            
+    
+    $0.baseURL = "https://api.github.com/"
+    $0.authURL = "https://github.com/login/oauth/"
+    $0.authHeader = "Authorization"
+    $0.authTokenKey = "Github"
+    
 }
 ```
 
@@ -138,7 +175,7 @@ let githubAPI = GithubAPI.session
         
 // setup endpoint
     
-var profile = GithubAPI.Endpoints.UserName.endpoint
+var profile = GithubAPI.Endpoints.UsersNamed.endpoint
     
 profile.pathpieces = ["username" : "joalbright"]
     

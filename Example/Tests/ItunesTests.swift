@@ -11,6 +11,17 @@ import Relax
 
 class ItunesTests: XCTestCase {
     
+    override func setUp() {
+        super.setUp()
+        
+        ItunesAPI.session.start {
+            
+            $0.baseURL = "https://itunes.apple.com/"
+            
+        }
+        
+    }
+    
     func testSearchRequest() {
         
         let expectation = self.expectationWithDescription(__FUNCTION__ + " asynchronous request")

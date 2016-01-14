@@ -39,10 +39,13 @@ public struct Endpoint {
     
     public var satisfied: Bool {
         
-        for parameter in requiredParameters {
+        parameter: for parameter in requiredParameters {
             
-            // TODO: Add split by "," and test if at least one of the values is satisfied
-            // "," denotes this or that is required
+            for choice in parameter.componentsSeparatedByString(",") {
+                
+                guard parameters[choice] == nil else { continue parameter }
+                
+            }
             
             guard parameters[parameter] != nil else { return false }
         

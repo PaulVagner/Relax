@@ -20,7 +20,7 @@ public class Relax {
     // TODO: Build auth system based on https://developer.foursquare.com/overview/auth
     // authurl -> signin -> redirecturl -> code -> tokenurl -> token
     
-    public class func request(endpoint: Endpoint, response completion: Response, api: API?) {
+    public class func request(endpoint: Endpoint, response completion: Response, api: StarterAPI?) {
         
         guard let api = api else { return completion(info: nil, error: NSURLError.BadAPI) }
         guard !api.authToken.isEmpty || !endpoint.requiresUser else { return completion(info: nil, error: NSURLError.BadUser) }

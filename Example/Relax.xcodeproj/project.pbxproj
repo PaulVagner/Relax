@@ -126,9 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				A976A7991C44BDF8008AFA87 /* Keys.swift */,
+				A951A9081C453DEA0037CDF1 /* Package.swift */,
 				A98CE6741C461D380089323F /* APIs */,
 				607FACE81AFB9204008FA782 /* Tests */,
-				A951A9081C453DEA0037CDF1 /* Package.swift */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for Relax */,
 				607FACD11AFB9204008FA782 /* Products */,

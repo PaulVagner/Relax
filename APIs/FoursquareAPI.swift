@@ -13,21 +13,7 @@ import Relax
 
 // Documentation : https://developer.foursquare.com
 
-public class FoursquareAPI: StarterAPI, API {
-    
-    public static var session = FoursquareAPI()
-    
-    public var baseURL: String = "https://api.foursquare.com/v2/"
-    public var authURL: String = "https://foursquare.com/oauth2/"
-    
-    public var authBasic: [String:String] = ["v":"20160112"]
-    public var authHeader: String = "Authorization"
-    public var authToken: String {
-        
-        get { return load("FoursquareToken") ?? "" }
-        set { save("FoursquareToken",newValue) }
-        
-    }
+public class FoursquareAPI: StarterAPI {
     
     public enum Endpoints: String {
         

@@ -19,6 +19,11 @@ class GithubTests: XCTestCase {
             $0.authBasic["client_id"] = GITHUB_CLIENT_KEY
             $0.authBasic["client_secret"] = GITHUB_CLIENT_SECRET
             
+            $0.baseURL = "https://api.github.com/"
+            $0.authURL = "https://github.com/login/oauth/"
+            $0.authHeader = "Authorization"
+            $0.authTokenKey = "Github"
+            
         }
     
     }
@@ -31,7 +36,7 @@ class GithubTests: XCTestCase {
         
         // setup endpoint
         
-        var profile = GithubAPI.Endpoints.UserName.endpoint
+        var profile = GithubAPI.Endpoints.UsersNamed.endpoint
         
         profile.pathpieces = ["username" : "joalbright"]
         

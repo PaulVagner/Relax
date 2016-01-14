@@ -13,21 +13,7 @@ import Relax
 
 // Documentation : https://developer.github.com/v3/
 
-public class GithubAPI: StarterAPI, API {
-    
-    public static var session = GithubAPI()
-    
-    public var baseURL: String = "https://api.github.com/"
-    public var authURL: String = "https://github.com/login/oauth/"
-    
-    public var authBasic: [String:String] = [:]
-    public var authHeader: String = "Authorization"
-    public var authToken: String {
-        
-        get { return load("GithubToken") ?? "" }
-        set { save("GithubToken",newValue) }
-        
-    }
+public class GithubAPI: StarterAPI {
     
     public enum Endpoints: String {
         

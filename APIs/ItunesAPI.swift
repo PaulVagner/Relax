@@ -13,21 +13,7 @@ import Relax
 
 // Documentation : https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html
 
-public class ItunesAPI: StarterAPI, API {
-    
-    public static var session = ItunesAPI()
-    
-    public var baseURL: String = "https://itunes.apple.com/"
-    public var authURL: String = ""
-    
-    public var authBasic: [String:String] = [:]
-    public var authHeader: String = ""
-    public var authToken: String {
-        
-        get { return load("ItunesToken") ?? "" }
-        set { save("ItunesToken",newValue) }
-        
-    }
+public class ItunesAPI: StarterAPI {
     
     public enum Endpoints: String {
         

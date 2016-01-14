@@ -11,37 +11,57 @@
 import Foundation
 import Inlinit
 
-
-public protocol API: Defaultable, Inlinit {
+public class StarterAPI: Defaultable, Inlinit {
     
-    var baseURL: String { get set }
-    var authURL: String { get set }
+    public static var session = StarterAPI()
     
-    var authBasic: [String:String] { get set }
-    var authHeader: String { get set }
-    var authToken: String { get set }
+    public var baseURL: String = ""
+    public var authURL: String = ""
     
-}
-
-extension API {
+    public var authBasic: [String:String] = [:]
+    public var authHeader: String = ""
     
-    public mutating func start(@noescape c: inout Self -> Void) -> Self {
+    public var authTokenKey: String = "Starter"
+    public var authToken: String {
         
-        c(&self); return self
+        get { return load(authTokenKey + "Token") ?? "" }
+        set { save(authTokenKey + "Token",newValue) }
         
     }
+    
+    
+    public enum RequestLibraries {
+        
+        case Relax
+        case AlamoFire
+    
+    }
+    
+    public var requestLibrary: RequestLibraries = .Relax
+    
+    public required init() { }
     
     public func request(endpoint: Endpoint, response: Response) {
         
-        Relax.request(endpoint, response: response, api: self)
+        switch requestLibrary {
+            
+        case .Relax :
+            
+            Relax.request(endpoint, response: response, api: self)
+            
+        case .AlamoFire :
+            
+            print("TODO: Add AlamoFire")
+            
+        }
         
     }
     
-}
-
-public class StarterAPI {
-    
-    public required init() { }
+    public func start(@noescape c: StarterAPI -> Void) -> Self {
+        
+        c(self); return self
+        
+    }
     
 }
 

@@ -21,6 +21,12 @@ class FoursquareTests: XCTestCase {
             $0.authBasic["client_id"] = FOURSQUARE_CLIENT_KEY
             $0.authBasic["client_secret"] = FOURSQUARE_CLIENT_SECRET
             
+            $0.baseURL = "https://api.foursquare.com/v2/"
+            $0.authURL = "https://foursquare.com/oauth2/"
+            $0.authBasic = ["v":"20160112"]
+            $0.authHeader = "Authorization"
+            $0.authTokenKey = "Foursquare"
+            
         }
         
     }
