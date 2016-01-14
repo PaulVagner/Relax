@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* GithubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* GithubTests.swift */; };
+		A942F19E1C482D160087C7CC /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A942F19D1C482D160087C7CC /* InstagramTests.swift */; };
 		A951A9051C45344A0037CDF1 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976A7991C44BDF8008AFA87 /* Keys.swift */; };
 		A951A9071C4536930037CDF1 /* ItunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9061C4536930037CDF1 /* ItunesTests.swift */; };
 		A951A9331C4565290037CDF1 /* FoursquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9321C4565290037CDF1 /* FoursquareTests.swift */; };
@@ -77,6 +78,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* GithubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTests.swift; sourceTree = "<group>"; };
 		94A79BA233E7DA3D2A9451C2 /* Pods-Relax_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relax_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relax_Example/Pods-Relax_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A942F19D1C482D160087C7CC /* InstagramTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramTests.swift; sourceTree = "<group>"; };
 		A951A9061C4536930037CDF1 /* ItunesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesTests.swift; sourceTree = "<group>"; };
 		A951A9081C453DEA0037CDF1 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		A951A9321C4565290037CDF1 /* FoursquareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTests.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				607FACEB1AFB9204008FA782 /* GithubTests.swift */,
 				A951A9061C4536930037CDF1 /* ItunesTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				A942F19D1C482D160087C7CC /* InstagramTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A942F19E1C482D160087C7CC /* InstagramTests.swift in Sources */,
 				A951A9331C4565290037CDF1 /* FoursquareTests.swift in Sources */,
 				A98CE6A01C461D470089323F /* TwitterAPI.swift in Sources */,
 				A98CE69F1C461D470089323F /* SlackAPI.swift in Sources */,

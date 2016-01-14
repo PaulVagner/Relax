@@ -26,6 +26,8 @@ public class Relax {
         guard !api.authToken.isEmpty || !endpoint.requiresUser else { return completion(info: nil, error: NSURLError.BadUser) }
         guard endpoint.satisfied else { return completion(info: nil, error: NSURLError.BadParameters) }
         
+        if api.authBasic["access_token"] == "ACCESS_TOKEN" { api.authBasic["access_token"] = api.authToken }
+        
         let keys = api.authBasic.flatten("&") { "\($0)=\($1)" }
         let query = api.authToken.isEmpty ? endpoint.query.isEmpty ? "?" + keys : endpoint.query + "&" + keys : endpoint.query
         let full = api.baseURL + endpoint.path + query

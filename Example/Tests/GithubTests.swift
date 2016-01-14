@@ -21,6 +21,7 @@ class GithubTests: XCTestCase {
             
             $0.baseURL = "https://api.github.com/"
             $0.authURL = "https://github.com/login/oauth/"
+            $0.authBasic = ["access_token":"ACCESS_TOKEN"]
             $0.authHeader = "Authorization"
             $0.authTokenKey = "Github"
             
