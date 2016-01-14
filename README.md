@@ -39,6 +39,7 @@ RESTful API endpoint manager
 #### Features
 
 - [ ] Response Object Structure (still dreaming this up)
+- [ ] Authentication System
 - [ ] AlamoFire Support
 
 ## Usage

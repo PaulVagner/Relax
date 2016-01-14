@@ -18,10 +18,7 @@ public class FoursquareAPI: StarterAPI, API {
     public static var session = FoursquareAPI()
     
     public var baseURL: String = "https://api.foursquare.com/v2/"
-    public var authURL: String = "https://foursquare.com/oauth2/authenticate"
-    
-    // TODO: Build auth system based on https://developer.foursquare.com/overview/auth
-    // authurl -> signin -> redirecturl -> code -> tokenurl -> token
+    public var authURL: String = "https://foursquare.com/oauth2/"
     
     public var authBasic: [String:String] = ["v":"20160112"]
     public var authHeader: String = "Authorization"
@@ -33,6 +30,10 @@ public class FoursquareAPI: StarterAPI, API {
     }
     
     public enum Endpoints: String {
+        
+        // Auth
+        
+        case Auth, AuthCode
         
         // Users
         
@@ -98,6 +99,11 @@ public class FoursquareAPI: StarterAPI, API {
             
             return [
                 
+                // Auth
+                
+                .Auth : Endpoint(path: "authenticate", requiredParameters: ["client_id","response_type","redirect_uri"]),
+                .AuthCode : Endpoint(path: "access_token", requiredParameters: ["client_id","client_secret","grant_type","redirect_uri","code"]),
+            
                 // Users
                 
                 .Users : Endpoint(path: "users/:user_id"),

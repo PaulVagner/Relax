@@ -17,6 +17,9 @@ private let _s = NSURLSession.sharedSession()
 
 public class Relax {
     
+    // TODO: Build auth system based on https://developer.foursquare.com/overview/auth
+    // authurl -> signin -> redirecturl -> code -> tokenurl -> token
+    
     public class func request(endpoint: Endpoint, response completion: Response, api: API?) {
         
         guard let api = api else { return completion(info: nil, error: NSURLError.BadAPI) }
