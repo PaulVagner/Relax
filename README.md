@@ -26,7 +26,7 @@ RESTful API endpoint manager
 - [ ] Flickr : [Docs](https://www.flickr.com/services/api/)
 - [x] ~~Foursquare~~ : [Docs](https://developer.foursquare.com) : [Jo Albright](https://github.com/joalbright)
 - [ ] ***Github*** : [Docs](https://developer.github.com/v3/) : [Jo Albright](https://github.com/joalbright)
-- [ ] ***Instagram*** : [Docs](https://www.instagram.com/developer/) : [Jo Albright](https://github.com/joalbright)
+- [x] ~~Instagram~~ : [Docs](https://www.instagram.com/developer/) : [Jo Albright](https://github.com/joalbright)
 - [x] ~~Itunes~~ : [Docs](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) : [Jo Albright](https://github.com/joalbright)
 - [ ] LinkedIn : [Docs](https://developer.linkedin.com/docs)
 - [ ] Marvel : [Docs](http://developer.marvel.com)
