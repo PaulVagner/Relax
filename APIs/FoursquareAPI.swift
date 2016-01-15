@@ -92,7 +92,7 @@ public class FoursquareAPI: StarterAPI {
             
                 // Users
                 
-                .Users : Endpoint(path: "users/:user_id"),
+                .Users : Endpoint(path: "users/:user_id", requiresUser: true),
                 .UsersRequests : Endpoint(path: "users/requests", requiresUser: true),
                 .UsersSearch : Endpoint(path: "users/search", requiresUser: true),
                 .UsersCheckins : Endpoint(path: "users/:user_id/checkins", requiresUser: true),

@@ -17,9 +17,7 @@ public class MarvelAPI: StarterAPI {
     
     public enum Endpoints: String {
         
-        // Auth
-        
-        case Auth, AuthCode
+        case PLACEHOLDER
         
         
         
@@ -31,8 +29,8 @@ public class MarvelAPI: StarterAPI {
                 
                 // Auth
                 
-                .Auth : Endpoint(path: "authenticate", requiredParameters: ["client_id","response_type","redirect_uri"]),
-                .AuthCode : Endpoint(path: "access_token", requiredParameters: ["client_id","client_secret","grant_type","redirect_uri","code"]),
+                .PLACEHOLDER : Endpoint(path: "PLACEHOLDER")
+                
                 
             ]
             
