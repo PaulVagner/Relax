@@ -17,6 +17,7 @@ RESTful API endpoint manager
 - [x] ~~Done~~
 - [ ] ***Started***
 - [ ] API : [Docs]() *documentation link*
+- [x] ~~API~~ : [File]() *source file*
 - [ ] API : [Lead Name]() *lead contributer* 
 
 **Please submit an issue if you would like a lead position for any (listed/unlisted) API**
@@ -24,12 +25,12 @@ RESTful API endpoint manager
 --- 
 
 - [ ] Flickr : [Docs](https://www.flickr.com/services/api/)
-- [x] ~~Foursquare~~ : [Docs](https://developer.foursquare.com) : [Jo Albright](https://github.com/joalbright)
+- [x] ~~Foursquare~~ : [Docs](https://developer.foursquare.com) : [File](APIs/FoursquareAPI.swift) : [Jo Albright](https://github.com/joalbright)
 - [ ] ***Github*** : [Docs](https://developer.github.com/v3/) : [Jo Albright](https://github.com/joalbright)
-- [x] ~~Instagram~~ : [Docs](https://www.instagram.com/developer/) : [Jo Albright](https://github.com/joalbright)
-- [x] ~~Itunes~~ : [Docs](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) : [Jo Albright](https://github.com/joalbright)
+- [x] ~~Instagram~~ : [Docs](https://www.instagram.com/developer/) : [File](APIs/InstagramAPI.swift) : [Jo Albright](https://github.com/joalbright)
+- [x] ~~iTunes~~ : [Docs](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) : [File](APIs/ItunesAPI.swift) : [Jo Albright](https://github.com/joalbright)
 - [ ] LinkedIn : [Docs](https://developer.linkedin.com/docs)
-- [ ] ***Marvel*** : [Docs](http://developer.marvel.com) : [Paul Vagner](https://github.com/PaulVagner)
+- [x] ~~Marvel~~ : [Docs](http://developer.marvel.com) : [File](APIs/MarvelAPI.swift) : [Paul Vagner](https://github.com/PaulVagner)
 - [ ] Meetup : [Docs](http://www.meetup.com/meetup_api/)
 - [ ] Pinterest : [Docs](https://developers.pinterest.com)
 - [ ] Slack : [Docs](https://api.slack.com)
@@ -50,7 +51,7 @@ RESTful API endpoint manager
 #### Features
 
 - [ ] Response Object Structure (still dreaming this up)
-- [x] ~~Authentication Structure~~ *Docs Coming Soon*
+- [x] ~~Authentication Structure~~ *docs coming soon*
 - [ ] AlamoFire Support (other?)
 
 ## Usage
@@ -59,7 +60,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ### Choose or Create API
 
-Go [here](APIs) to choose a prebuilt API or create your own. The example below uses the prebuilt [GitHubAPI](APIs/GithubAPI.swift).
+Go [here](APIs) to choose a prebuilt API or create your own. The example below uses the prebuilt [GitHubAPI](APIs/GitHubAPI.swift).
 
 ### Use API
 
