@@ -11,9 +11,11 @@
 import Foundation
 import Inlinit
 
-public class StarterAPI: Defaultable, Inlinit {
+private let _s = API()
+
+public class API: Defaultable, Inlinit {
     
-    public static var session = StarterAPI()
+    public class func session() -> API { return _s }
     
     public var baseURL: String = ""
     public var authURL: String = ""
@@ -52,9 +54,17 @@ public class StarterAPI: Defaultable, Inlinit {
         
     }
     
-    public func start(@noescape c: StarterAPI -> Void) -> Self {
+    public func start() { }
+    
+    public func update(@noescape c: API -> Void) -> Self {
         
         c(self); return self
+        
+    }
+    
+    public func loginDetails() -> (auth: Endpoint, authCode: Endpoint) {
+        
+        return (Endpoint(path: ""), Endpoint(path: ""))
         
     }
     

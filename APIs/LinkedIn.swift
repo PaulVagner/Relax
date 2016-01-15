@@ -13,7 +13,7 @@ import Relax
 
 // Documentation : https://developer.linkedin.com/docs
 
-public class LinkedInAPI: StarterAPI {
+public class LinkedInAPI: API {
     
     public enum Endpoints: String {
         

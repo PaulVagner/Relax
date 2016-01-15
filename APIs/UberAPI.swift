@@ -13,7 +13,7 @@ import Relax
 
 // Documentation : https://developer.uber.com
 
-public class UberAPI: StarterAPI {
+public class UberAPI: API {
     
     public enum Endpoints: String {
         

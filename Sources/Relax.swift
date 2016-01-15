@@ -17,19 +17,19 @@ private let _s = NSURLSession.sharedSession()
 
 public class Relax {
     
-    public class func url(endpoint: Endpoint, api: StarterAPI?) throws -> String {
+    public class func url(endpoint: Endpoint, api: API?) throws -> String {
         
         guard let api = api else { throw NSURLError.BadAPI }
         guard endpoint.satisfied else { throw NSURLError.BadParameters }
         
         let keys = api.authBasic.flatten("&") { "\($0)=\($1)" }
-        let query = api.authToken.isEmpty ? endpoint.query.isEmpty ? "?" + keys : endpoint.query + "&" + keys : endpoint.query
+        let query = api.authToken.isEmpty ? endpoint.query.isEmpty ? "?" + keys : endpoint.query.containsString(keys) ? endpoint.query : endpoint.query + "&" + keys : endpoint.query
 
         return api.authURL + endpoint.path + query
         
     }
     
-    public class func request(endpoint: Endpoint, response completion: Response, api: StarterAPI?) {
+    public class func request(endpoint: Endpoint, response completion: Response, api: API?) {
         
         guard let api = api else { return completion(info: nil, error: NSURLError.BadAPI) }
         guard !api.authToken.isEmpty || !endpoint.requiresUser else { return completion(info: nil, error: NSURLError.BadUser) }
@@ -38,17 +38,22 @@ public class Relax {
         for (k,v) in api.authBasic { if v == "ACCESS_TOKEN" { api.authBasic[k] = api.authToken } }
         
         let keys = api.authBasic.flatten("&") { "\($0)=\($1)" }
+        
         let query = endpoint.query.isEmpty ? "?" + keys : endpoint.query + "&" + keys
+        
         let full = (endpoint.parameters["code"] != nil ? api.authURL : api.baseURL) + endpoint.path + query
-        
-        
         
         guard let url = NSURL(string: full) else { return completion(info: nil, error: NSURLError.BadURL) }
         
         let request = NSMutableURLRequest(URL: url)
         
         request.HTTPMethod = endpoint.method.rawValue
-        request.HTTPBody = endpoint.method == .GET ? nil : try? endpoint.parameters.serialize()
+        
+        if endpoint.method != .GET {
+            
+            request.HTTPBody = endpoint.parameters.flatten("&") { "\($0)=\($1)" }.dataUsingEncoding(NSUTF8StringEncoding)
+            
+        }
         
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -62,6 +67,7 @@ public class Relax {
         let task = _s.dataTaskWithRequest(request) { data, response, error in
             
             dispatch_async(dispatch_get_main_queue(), {
+                
                 
                 guard error == nil else { return completion(info: nil, error: error?.convert) }
                 guard let data = data else { return completion(info: nil, error: NSURLError.BadData) }

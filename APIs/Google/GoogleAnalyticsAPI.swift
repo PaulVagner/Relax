@@ -13,7 +13,7 @@ import Relax
 
 // Documentation : https://developers.google.com/analytics/
 
-public class GoogleAnalyticsAPI: StarterAPI {
+public class GoogleAnalyticsAPI: API {
     
     public enum Endpoints: String {
         

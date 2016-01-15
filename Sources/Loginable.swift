@@ -11,21 +11,23 @@ import Foundation
 
 public protocol Loginable {
     
-    var api: StarterAPI! { get set }
-    var auth: Endpoint! { get set }
-    var authCode: Endpoint! { get set }
+    var session: API! { get set }
     
 }
 
 extension Loginable {
     
-    public func requestToken(urlString: String, var endpoint: Endpoint, api: StarterAPI?, finished: (success: Bool) -> Void) {
+    public var loginDetails: (auth: Endpoint, authCode: Endpoint)! { return session.loginDetails() }
+    
+    public func requestToken(urlString: String, var endpoint: Endpoint, api: API?, finished: (success: Bool) -> Void) {
         
         guard let code = urlString.param("code") where !code.isEmpty else { return finished(success: false) }
         
         endpoint.parameters["code"] = code
         
         api?.request(endpoint) {
+            
+            print($0)
             
             guard let info = $0.info as? [String:AnyObject] else { return finished(success: false) }
             guard let token = info["access_token"] as? String else { return finished(success: false) }

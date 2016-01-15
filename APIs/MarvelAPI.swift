@@ -13,7 +13,7 @@ import Relax
 
 // Documentation : http://developer.marvel.com
 
-public class MarvelAPI: StarterAPI {
+public class MarvelAPI: API {
     
     public enum Endpoints: String {
         

@@ -104,7 +104,13 @@ extension CollectionType {
     func flatten(seperator: String = "", transform: (Self.Generator.Element) -> String) -> String {
         
         var flattenedElements: [String] = []
-        for element in self { flattenedElements.append(transform(element)) }
+        for element in self {
+        
+            let flat = transform(element)
+            guard flat.characters.last != "=" else { continue }
+            flattenedElements.append(flat)
+        
+        }
         return flattenedElements.joinWithSeparator(seperator)
         
     }
