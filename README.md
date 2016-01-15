@@ -29,7 +29,7 @@ RESTful API endpoint manager
 - [x] ~~Instagram~~ : [Docs](https://www.instagram.com/developer/) : [Jo Albright](https://github.com/joalbright)
 - [x] ~~Itunes~~ : [Docs](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) : [Jo Albright](https://github.com/joalbright)
 - [ ] LinkedIn : [Docs](https://developer.linkedin.com/docs)
-- [ ] ***Marvel*** : [Docs](http://developer.marvel.com) [Paul Vagner](https://github.com/PaulVagner)
+- [ ] ***Marvel*** : [Docs](http://developer.marvel.com) : [Paul Vagner](https://github.com/PaulVagner)
 - [ ] Meetup : [Docs](http://www.meetup.com/meetup_api/)
 - [ ] Pinterest : [Docs](https://developers.pinterest.com)
 - [ ] Slack : [Docs](https://api.slack.com)
@@ -59,7 +59,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ### Choose or Create API
 
-Go [here](APIs) to choose a prebuilt API or create your own. The example below uses the prebuilt [GitHubAPI](APIs/GitHubAPI.swift).
+Go [here](APIs) to choose a prebuilt API or create your own. The example below uses the prebuilt [GitHubAPI](APIs/GithubAPI.swift).
 
 ### Use API
 

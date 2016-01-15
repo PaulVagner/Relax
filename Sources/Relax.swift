@@ -68,7 +68,6 @@ public class Relax {
             
             dispatch_async(dispatch_get_main_queue(), {
                 
-                
                 guard error == nil else { return completion(info: nil, error: error?.convert) }
                 guard let data = data else { return completion(info: nil, error: NSURLError.BadData) }
                 completion(info: try? data.unserialize(), error: nil)
