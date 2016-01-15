@@ -1,6 +1,0 @@
-framework module Encodable {
-  umbrella header "Encodable-umbrella.h"
-
-  export *
-  module * { export * }
-}
