@@ -29,7 +29,6 @@ public class StarterAPI: Defaultable, Inlinit {
         
     }
     
-    
     public enum RequestLibraries {
         
         case Relax
@@ -41,19 +40,15 @@ public class StarterAPI: Defaultable, Inlinit {
     
     public required init() { }
     
+    public func url(endpoint: Endpoint) throws -> String {
+        
+        return try Relax.url(endpoint, api: self)
+        
+    }
+    
     public func request(endpoint: Endpoint, response: Response) {
         
-        switch requestLibrary {
-            
-        case .Relax :
-            
-            Relax.request(endpoint, response: response, api: self)
-            
-        case .AlamoFire :
-            
-            print("TODO: Add AlamoFire")
-            
-        }
+        Relax.request(endpoint, response: response, api: self)
         
     }
     

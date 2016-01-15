@@ -89,9 +89,9 @@ public struct Endpoint {
     
 }
 
-public extension String {
+extension String {
     
-    public func replace(s1: String, _ s2: String) -> String {
+    func replace(s1: String, _ s2: String) -> String {
         
         return self.stringByReplacingOccurrencesOfString(s1, withString: s2)
         
@@ -99,9 +99,9 @@ public extension String {
     
 }
 
-public extension CollectionType {
+extension CollectionType {
     
-    public func flatten(seperator: String = "", transform: (Self.Generator.Element) -> String) -> String {
+    func flatten(seperator: String = "", transform: (Self.Generator.Element) -> String) -> String {
         
         var flattenedElements: [String] = []
         for element in self { flattenedElements.append(transform(element)) }

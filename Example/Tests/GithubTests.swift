@@ -33,7 +33,7 @@ class GithubTests: XCTestCase {
         
         let expectation = self.expectationWithDescription(__FUNCTION__ + " asynchronous request")
         
-        let githubAPI = GithubAPI.session
+        let session = GithubAPI.session
         
         // setup endpoint
         
@@ -43,7 +43,7 @@ class GithubTests: XCTestCase {
         
         // run request
         
-        githubAPI.request(profile) {
+        session.request(profile) {
             
             XCTAssertNil($0.error, __FUNCTION__ + " error \($0.error)")
             

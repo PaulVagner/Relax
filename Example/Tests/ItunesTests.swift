@@ -28,7 +28,7 @@ class ItunesTests: XCTestCase {
         
         // singleton Itunes API
         
-        let itunesAPI = ItunesAPI.session
+        let session = ItunesAPI.session
         
         // setup endpoint
         
@@ -38,7 +38,7 @@ class ItunesTests: XCTestCase {
         
         // run request
         
-        itunesAPI.request(search) {
+        session.request(search) {
             
             XCTAssertNil($0.error, __FUNCTION__ + " error \($0.error)")
             
