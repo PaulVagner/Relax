@@ -16,18 +16,7 @@ class FoursquareTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        FoursquareAPI.session.start {
-            
-            $0.authBasic["client_id"] = FOURSQUARE_CLIENT_ID
-            $0.authBasic["client_secret"] = FOURSQUARE_CLIENT_SECRET
-            
-            $0.baseURL = "https://api.foursquare.com/v2/"
-            $0.authURL = "https://foursquare.com/oauth2/"
-            $0.authBasic = ["v":"20160112","oauth_token":"ACCESS_TOKEN"]
-            $0.authHeader = "Authorization"
-            $0.authTokenKey = "Foursquare"
-            
-        }
+        FoursquareAPI.session().start()
         
     }
     
@@ -45,7 +34,7 @@ class FoursquareTests: XCTestCase {
         
         // run request
         
-        session.request(atlanta) {
+        session().request(atlanta) {
             
             XCTAssertNil($0.error, __FUNCTION__ + " error \($0.error)")
             

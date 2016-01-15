@@ -14,11 +14,7 @@ class ItunesTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        ItunesAPI.session.start {
-            
-            $0.baseURL = "https://itunes.apple.com/"
-            
-        }
+        ItunesAPI.session().start()
         
     }
     
@@ -38,7 +34,7 @@ class ItunesTests: XCTestCase {
         
         // run request
         
-        session.request(search) {
+        session().request(search) {
             
             XCTAssertNil($0.error, __FUNCTION__ + " error \($0.error)")
             
@@ -68,7 +64,7 @@ class ItunesTests: XCTestCase {
         
         // run request
         
-        itunesAPI.request(search) {
+        itunesAPI().request(search) {
             
             XCTAssertNil($0.error, __FUNCTION__ + " error \($0.error)")
             

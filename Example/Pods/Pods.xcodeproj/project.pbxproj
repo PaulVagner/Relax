@@ -31,10 +31,10 @@
 		DD26055EBBA633637AA6A4E90B5BDD7F /* Inlinit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D52D21C597B3310CA4B262D20FAF94B /* Inlinit-dummy.m */; };
 		DD8F2ED0F213B82995E41AFFE4B8FD5D /* Inlinit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FB2A9C183795981B0486895C46C06E /* Inlinit.framework */; };
 		DDAE8EBBEAFA35E1C43CC6A5458AB1E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90A8B94876AFB9523C42430521A33F9 /* Foundation.framework */; };
-		E1C5FCB85B1D8FFB9B948FF58F4E0AE3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DA26E73A0CF1239D313465C6349FB /* API.swift */; };
+		E1C5FCB85B1D8FFB9B948FF58F4E0AE3 /* RelaxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DA26E73A0CF1239D313465C6349FB /* RelaxAPI.swift */; };
 		E45B8FA68F2395BB6DF7BAD7FA0B53EB /* Encodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D9BF6A37CFFEF34F81FFD96B64EAF0 /* Encodable.framework */; };
 		E9AE61FDF6CC133FF7B9E00D5C1A4307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90A8B94876AFB9523C42430521A33F9 /* Foundation.framework */; };
-		F15D2739115D9D5A9CFC75C6F4EEE674 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED8723FFC8B0FCF5FA1B21B381C8D24 /* Endpoint.swift */; };
+		F15D2739115D9D5A9CFC75C6F4EEE674 /* RelaxEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED8723FFC8B0FCF5FA1B21B381C8D24 /* RelaxEndpoint.swift */; };
 		F79593ADB34D69801125BFC957D8802C /* Inlinit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F338B7BFF191FC81C222187F145E9BB /* Inlinit.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,7 +144,7 @@
 		41D46E92A720588970751F3823F29D77 /* Pods-Relax_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Relax_Example-frameworks.sh"; sourceTree = "<group>"; };
 		4B1C07502D23D1DA425C0716B3B8BD21 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		573FE56DD334A9212949A2066EFADE60 /* Inlinit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Inlinit.modulemap; sourceTree = "<group>"; };
-		574DA26E73A0CF1239D313465C6349FB /* API.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		574DA26E73A0CF1239D313465C6349FB /* RelaxAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RelaxAPI.swift; sourceTree = "<group>"; };
 		57AFE83E07457B1E8EC2D28F98331EFD /* Relax.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Relax.modulemap; sourceTree = "<group>"; };
 		5E19BDE6E6FF69F5A016B2AB5384FE4E /* Serializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Serializable.swift; path = Sources/Serializable.swift; sourceTree = "<group>"; };
 		65F7B0D9835439029DB13EA8420FDAA6 /* Pods-Relax_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Relax_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		C0B2F2628E7E5D6B160478CC4C8E5E88 /* Relax.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Relax.swift; sourceTree = "<group>"; };
 		C5454067C8B15A0F37D6561345811495 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD603794688C57E5C0E925DFACDFC286 /* Inlinit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Inlinit-prefix.pch"; sourceTree = "<group>"; };
-		CED8723FFC8B0FCF5FA1B21B381C8D24 /* Endpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CED8723FFC8B0FCF5FA1B21B381C8D24 /* RelaxEndpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RelaxEndpoint.swift; sourceTree = "<group>"; };
 		D2CFCF71386F4F52FED8E8DB26660AD0 /* Relax.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Relax.xcconfig; sourceTree = "<group>"; };
 		D2E3B1E80269C08AA7F250D80DED887D /* Pods-Relax_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Relax_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E77DE7D731181DD4F9BF45058323C7FA /* Pods_Relax_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Relax_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,8 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				C0B2F2628E7E5D6B160478CC4C8E5E88 /* Relax.swift */,
-				574DA26E73A0CF1239D313465C6349FB /* API.swift */,
-				CED8723FFC8B0FCF5FA1B21B381C8D24 /* Endpoint.swift */,
+				574DA26E73A0CF1239D313465C6349FB /* RelaxAPI.swift */,
+				CED8723FFC8B0FCF5FA1B21B381C8D24 /* RelaxEndpoint.swift */,
 				89AA19791FDEDBC1B302BFB10170B8DF /* Defaultable.swift */,
 				A98C39CA1C4875C800D001D6 /* Loginable.swift */,
 			);
@@ -770,10 +770,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1C5FCB85B1D8FFB9B948FF58F4E0AE3 /* API.swift in Sources */,
+				E1C5FCB85B1D8FFB9B948FF58F4E0AE3 /* RelaxAPI.swift in Sources */,
 				A98C39CC1C48768F00D001D6 /* Loginable.swift in Sources */,
 				35B7415532FE1FB03FE39C14BF4BD33E /* Defaultable.swift in Sources */,
-				F15D2739115D9D5A9CFC75C6F4EEE674 /* Endpoint.swift in Sources */,
+				F15D2739115D9D5A9CFC75C6F4EEE674 /* RelaxEndpoint.swift in Sources */,
 				9D66FB2F894BA6F7856256FA21BBC04E /* Relax-dummy.m in Sources */,
 				3C463A3210FF7412E4A12529486278A2 /* Relax.swift in Sources */,
 			);

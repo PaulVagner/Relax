@@ -29,7 +29,7 @@ RESTful API endpoint manager
 - [x] ~~Instagram~~ : [Docs](https://www.instagram.com/developer/) : [Jo Albright](https://github.com/joalbright)
 - [x] ~~Itunes~~ : [Docs](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) : [Jo Albright](https://github.com/joalbright)
 - [ ] LinkedIn : [Docs](https://developer.linkedin.com/docs)
-- [ ] Marvel : [Docs](http://developer.marvel.com)
+- [ ] ***Marvel*** : [Docs](http://developer.marvel.com) [Paul Vagner](https://github.com/PaulVagner)
 - [ ] Meetup : [Docs](http://www.meetup.com/meetup_api/)
 - [ ] Pinterest : [Docs](https://developers.pinterest.com)
 - [ ] Slack : [Docs](https://api.slack.com)
@@ -50,120 +50,18 @@ RESTful API endpoint manager
 #### Features
 
 - [ ] Response Object Structure (still dreaming this up)
-- [ ] Authentication System
+- [x] ~~Authentication Structure~~ *Docs Coming Soon*
 - [ ] AlamoFire Support (other?)
 
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-### Create API
+### Choose or Create API
 
-```swift
-// Documentation : https://developer.github.com/v3/
-
-public class GithubAPI: StarterAPI {
-    
-    public enum Endpoints: String {
-        
-        // Auth
-        
-        case Auth, AuthCode
-        
-        // Gists
-        
-        case Gists, GistsUser, GistsMe, GistsMeStarred, Gist, GistRevision, GistCreate, GistEdit, GistDelete, GistCommits, GistCheck, GistStar, GistUnstar, GistFork, GistForks    
-            
-        // Search
-        
-        case SearchRepos, SearchCode, SearchIssues, SearchUsers
-        
-        // User
-        
-        case Users, UsersNamed, UsersMe, UsersMeUpdate, UsersMeEmails, UsersMeEmailsAdd, UsersMeEmailsDelete, UsersFollowers, UsersMeFollowers, UsersFollowing, UsersMeFollowing, UsersFollowingUserCheck, UsersMeFollowingUserCheck, UsersMeFollowUser, UsersMeUnfollowUser
-        
-        
-        
-        public var endpoint: Endpoint { return _endpoints[self]! }
-        
-        var _endpoints: [Endpoints:Endpoint] {
-            
-            return [
-                
-                // Auth
-                
-                .Auth : Endpoint(path: "authorize", requiredParameters: ["client_id","redirect_uri","state"]),
-                .AuthCode : Endpoint(path: "access_token", requiredParameters: ["client_id","client_secret","code","redirect_uri","state"]),
-             
-                // Gists
-                
-                .Gists : Endpoint(path: "gists/public"),
-                .GistsUser : Endpoint(path: "users/:username/gists"),
-                .GistsMe : Endpoint(path: "gists", requiresUser: true),
-                .GistsMeStarred : Endpoint(path: "gists/starred", requiresUser: true),
-                .Gist : Endpoint(path: "gists/:id"),
-                .GistRevision : Endpoint(path: "gists/:id/:sha"),
-                .GistCreate : Endpoint(path: "gists", method: .POST, requiresUser: true),
-                .GistEdit : Endpoint(path: "gists/:id", method: .PATCH, requiresUser: true),
-                .GistDelete : Endpoint(path: "gists/:id", method: .DELETE, requiresUser: true),
-                .GistCommits : Endpoint(path: "gists/:id/commits"),
-                .GistCheck : Endpoint(path: "gists/:id/star", requiresUser: true),
-                .GistStar : Endpoint(path: "gists/:id/star", method: .PUT, requiresUser: true),
-                .GistUnstar : Endpoint(path: "gists/:id/star", method: .DELETE, requiresUser: true),
-                .GistFork : Endpoint(path: "gists/:id/forks", method: .POST, requiresUser: true),
-                .GistForks : Endpoint(path: "gists/:id/forks"),
-                
-                // Search
-                
-                .SearchRepos : Endpoint(path: "search/repositories"),
-                .SearchCode : Endpoint(path: "search/code"),
-                .SearchIssues : Endpoint(path: "search/issues"),
-                .SearchUsers : Endpoint(path: "search/users"),
-                
-                // User
-                
-                .Users : Endpoint(path: "users"),
-                .UsersNamed : Endpoint(path: "users/:username"),
-                .UsersMe : Endpoint(path: "user", requiresUser: true),
-                .UsersMeUpdate : Endpoint(path: "user", method: .PATCH, requiresUser: true),
-                .UsersMeEmails : Endpoint(path: "user/emails", requiresUser: true),
-                .UsersMeEmailsAdd : Endpoint(path: "user/emails", method: .POST, requiresUser: true),
-                .UsersMeEmailsDelete : Endpoint(path: "user/emails", method: .DELETE, requiresUser: true),
-                .UsersFollowers : Endpoint(path: "users/:username/followers"),
-                .UsersMeFollowers : Endpoint(path: "user/followers", requiresUser: true),
-                .UsersFollowing : Endpoint(path: "users/:username/following"),
-                .UsersMeFollowing : Endpoint(path: "user/following", requiresUser: true),
-                .UsersFollowingUserCheck : Endpoint(path: "users/:username/following/:target_user"),
-                .UsersMeFollowingUserCheck : Endpoint(path: "user/following/:username", requiresUser: true),
-                .UsersMeFollowUser : Endpoint(path: "user/following/:username", method: .PUT, requiresUser: true),
-                .UsersMeUnfollowUser : Endpoint(path: "user/following/:username", method: .DELETE, requiresUser: true)
-                
-            ]
-            
-        }
-        
-    }
-
-}
-```
+Go [here](APIs) to choose a prebuilt API or create your own. The example below uses the prebuilt [GitHubAPI](APIs/GitHubAPI.swift).
 
 ### Use API
-
-**start session**
-
-```swift
-GithubAPI.session.start {
-            
-    $0.authBasic["client_id"] = GITHUB_CLIENT_KEY
-    $0.authBasic["client_secret"] = GITHUB_CLIENT_SECRET
-    
-    $0.baseURL = "https://api.github.com/"
-    $0.authURL = "https://github.com/login/oauth/"
-    $0.authHeader = "Authorization"
-    $0.authTokenKey = "Github"
-    
-}
-```
 
 > You will need to [register an application](https://github.com/settings/applications/new). Then create a Keys.swift file (make sure to ignore the file if your repo is public).
 

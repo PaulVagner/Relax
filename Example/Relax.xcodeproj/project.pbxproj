@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		54A39CAB6A74BAE80025C99E /* Pods_Relax_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9D9E06EE081D7CB629A952 /* Pods_Relax_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* GithubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* GithubTests.swift */; };
+		607FACEC1AFB9204008FA782 /* GitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* GitHubTests.swift */; };
 		A942F19E1C482D160087C7CC /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A942F19D1C482D160087C7CC /* InstagramTests.swift */; };
 		A951A9051C45344A0037CDF1 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976A7991C44BDF8008AFA87 /* Keys.swift */; };
 		A951A9071C4536930037CDF1 /* ItunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9061C4536930037CDF1 /* ItunesTests.swift */; };
 		A951A9331C4565290037CDF1 /* FoursquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9321C4565290037CDF1 /* FoursquareTests.swift */; };
 		A976A79A1C44BDF8008AFA87 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976A7991C44BDF8008AFA87 /* Keys.swift */; };
+		A98C39C91C48756700D001D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C39C81C48756700D001D6 /* LoginViewController.swift */; };
 		A98CE6851C461D380089323F /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6751C461D380089323F /* FlickrAPI.swift */; };
 		A98CE6861C461D380089323F /* FoursquareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6761C461D380089323F /* FoursquareAPI.swift */; };
-		A98CE6871C461D380089323F /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6771C461D380089323F /* GithubAPI.swift */; };
+		A98CE6871C461D380089323F /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6771C461D380089323F /* GitHubAPI.swift */; };
 		A98CE6881C461D380089323F /* GoogleAnalyticsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6791C461D380089323F /* GoogleAnalyticsAPI.swift */; };
 		A98CE6891C461D380089323F /* GoogleMapsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE67A1C461D380089323F /* GoogleMapsAPI.swift */; };
 		A98CE68A1C461D380089323F /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE67B1C461D380089323F /* InstagramAPI.swift */; };
@@ -36,7 +36,7 @@
 		A98CE6931C461D380089323F /* YoutubeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6841C461D380089323F /* YoutubeAPI.swift */; };
 		A98CE6941C461D470089323F /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6751C461D380089323F /* FlickrAPI.swift */; };
 		A98CE6951C461D470089323F /* FoursquareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6761C461D380089323F /* FoursquareAPI.swift */; };
-		A98CE6961C461D470089323F /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6771C461D380089323F /* GithubAPI.swift */; };
+		A98CE6961C461D470089323F /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6771C461D380089323F /* GitHubAPI.swift */; };
 		A98CE6971C461D470089323F /* GoogleAnalyticsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6791C461D380089323F /* GoogleAnalyticsAPI.swift */; };
 		A98CE6981C461D470089323F /* GoogleMapsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE67A1C461D380089323F /* GoogleMapsAPI.swift */; };
 		A98CE6991C461D470089323F /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE67B1C461D380089323F /* InstagramAPI.swift */; };
@@ -49,6 +49,12 @@
 		A98CE6A01C461D470089323F /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6821C461D380089323F /* TwitterAPI.swift */; };
 		A98CE6A11C461D470089323F /* UberAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6831C461D380089323F /* UberAPI.swift */; };
 		A98CE6A21C461D470089323F /* YoutubeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6841C461D380089323F /* YoutubeAPI.swift */; };
+		A9A74D5A1C493AD5006C3183 /* LinkedInTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A74D591C493AD5006C3183 /* LinkedInTVC.swift */; };
+		A9A74D5C1C493AE0006C3183 /* MarvelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A74D5B1C493AE0006C3183 /* MarvelTVC.swift */; };
+		A9A74D601C493B45006C3183 /* InstagramCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A74D5F1C493B45006C3183 /* InstagramCVC.swift */; };
+		A9A74D621C493B5B006C3183 /* ItunesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A74D611C493B5B006C3183 /* ItunesTVC.swift */; };
+		A9A74D641C493B81006C3183 /* GitHubTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A74D631C493B81006C3183 /* GitHubTVC.swift */; };
+		A9A74D661C493BB2006C3183 /* FoursquareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A74D651C493BB2006C3183 /* FoursquareVC.swift */; };
 		E95756E50C792DC152A2D511 /* Pods_Relax_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED5F6F96CB536E84E422A92 /* Pods_Relax_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,22 +76,22 @@
 		607FACD01AFB9204008FA782 /* Relax_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relax_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Relax_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Relax_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* GithubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* GitHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTests.swift; sourceTree = "<group>"; };
 		94A79BA233E7DA3D2A9451C2 /* Pods-Relax_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relax_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relax_Example/Pods-Relax_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A942F19D1C482D160087C7CC /* InstagramTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramTests.swift; sourceTree = "<group>"; };
 		A951A9061C4536930037CDF1 /* ItunesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesTests.swift; sourceTree = "<group>"; };
 		A951A9081C453DEA0037CDF1 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		A951A9321C4565290037CDF1 /* FoursquareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTests.swift; sourceTree = "<group>"; };
 		A976A7991C44BDF8008AFA87 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keys.swift; path = Relax/Keys.swift; sourceTree = "<group>"; };
+		A98C39C81C48756700D001D6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A98CE6751C461D380089323F /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		A98CE6761C461D380089323F /* FoursquareAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareAPI.swift; sourceTree = "<group>"; };
-		A98CE6771C461D380089323F /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		A98CE6771C461D380089323F /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		A98CE6791C461D380089323F /* GoogleAnalyticsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsAPI.swift; sourceTree = "<group>"; };
 		A98CE67A1C461D380089323F /* GoogleMapsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsAPI.swift; sourceTree = "<group>"; };
 		A98CE67B1C461D380089323F /* InstagramAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
@@ -98,6 +104,12 @@
 		A98CE6821C461D380089323F /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		A98CE6831C461D380089323F /* UberAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberAPI.swift; sourceTree = "<group>"; };
 		A98CE6841C461D380089323F /* YoutubeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeAPI.swift; sourceTree = "<group>"; };
+		A9A74D591C493AD5006C3183 /* LinkedInTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedInTVC.swift; sourceTree = "<group>"; };
+		A9A74D5B1C493AE0006C3183 /* MarvelTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelTVC.swift; sourceTree = "<group>"; };
+		A9A74D5F1C493B45006C3183 /* InstagramCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramCVC.swift; sourceTree = "<group>"; };
+		A9A74D611C493B5B006C3183 /* ItunesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesTVC.swift; sourceTree = "<group>"; };
+		A9A74D631C493B81006C3183 /* GitHubTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTVC.swift; sourceTree = "<group>"; };
+		A9A74D651C493BB2006C3183 /* FoursquareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareVC.swift; sourceTree = "<group>"; };
 		CD9D9E06EE081D7CB629A952 /* Pods_Relax_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Relax_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26AEFCFB7650721EF394925 /* Pods-Relax_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relax_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Relax_Example/Pods-Relax_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA4C02C45FDF1091636C720 /* Relax.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Relax.podspec; path = ../Relax.podspec; sourceTree = "<group>"; };
@@ -151,7 +163,8 @@
 		607FACD21AFB9204008FA782 /* Example for Relax */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				A9A74D581C49391C006C3183 /* API Controllers */,
+				A98C39C81C48756700D001D6 /* LoginViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -174,10 +187,10 @@
 			isa = PBXGroup;
 			children = (
 				A951A9321C4565290037CDF1 /* FoursquareTests.swift */,
-				607FACEB1AFB9204008FA782 /* GithubTests.swift */,
+				607FACEB1AFB9204008FA782 /* GitHubTests.swift */,
+				A942F19D1C482D160087C7CC /* InstagramTests.swift */,
 				A951A9061C4536930037CDF1 /* ItunesTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
-				A942F19D1C482D160087C7CC /* InstagramTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -222,7 +235,7 @@
 				A97595D31C4637CD00DD55B4 /* Facebook */,
 				A98CE6751C461D380089323F /* FlickrAPI.swift */,
 				A98CE6761C461D380089323F /* FoursquareAPI.swift */,
-				A98CE6771C461D380089323F /* GithubAPI.swift */,
+				A98CE6771C461D380089323F /* GitHubAPI.swift */,
 				A98CE6781C461D380089323F /* Google */,
 				A98CE67B1C461D380089323F /* InstagramAPI.swift */,
 				A98CE67C1C461D380089323F /* ItunesAPI.swift */,
@@ -246,6 +259,19 @@
 				A98CE67A1C461D380089323F /* GoogleMapsAPI.swift */,
 			);
 			path = Google;
+			sourceTree = "<group>";
+		};
+		A9A74D581C49391C006C3183 /* API Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9A74D591C493AD5006C3183 /* LinkedInTVC.swift */,
+				A9A74D5B1C493AE0006C3183 /* MarvelTVC.swift */,
+				A9A74D5F1C493B45006C3183 /* InstagramCVC.swift */,
+				A9A74D611C493B5B006C3183 /* ItunesTVC.swift */,
+				A9A74D631C493B81006C3183 /* GitHubTVC.swift */,
+				A9A74D651C493BB2006C3183 /* FoursquareVC.swift */,
+			);
+			name = "API Controllers";
 			sourceTree = "<group>";
 		};
 		CFDDAB8A72270A785B812344 /* Pods */ = {
@@ -459,22 +485,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				A98CE6871C461D380089323F /* GithubAPI.swift in Sources */,
+				A98CE6871C461D380089323F /* GitHubAPI.swift in Sources */,
 				A98CE68B1C461D380089323F /* ItunesAPI.swift in Sources */,
+				A9A74D5C1C493AE0006C3183 /* MarvelTVC.swift in Sources */,
+				A9A74D661C493BB2006C3183 /* FoursquareVC.swift in Sources */,
 				A98CE68E1C461D380089323F /* MeetupAPI.swift in Sources */,
 				A98CE68D1C461D380089323F /* MarvelAPI.swift in Sources */,
 				A98CE6861C461D380089323F /* FoursquareAPI.swift in Sources */,
 				A98CE6931C461D380089323F /* YoutubeAPI.swift in Sources */,
 				A976A79A1C44BDF8008AFA87 /* Keys.swift in Sources */,
+				A98C39C91C48756700D001D6 /* LoginViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				A98CE6911C461D380089323F /* TwitterAPI.swift in Sources */,
 				A98CE68A1C461D380089323F /* InstagramAPI.swift in Sources */,
 				A98CE6851C461D380089323F /* FlickrAPI.swift in Sources */,
 				A98CE68C1C461D380089323F /* LinkedIn.swift in Sources */,
 				A98CE6901C461D380089323F /* SlackAPI.swift in Sources */,
+				A9A74D5A1C493AD5006C3183 /* LinkedInTVC.swift in Sources */,
+				A9A74D621C493B5B006C3183 /* ItunesTVC.swift in Sources */,
+				A9A74D641C493B81006C3183 /* GitHubTVC.swift in Sources */,
 				A98CE6891C461D380089323F /* GoogleMapsAPI.swift in Sources */,
 				A98CE6881C461D380089323F /* GoogleAnalyticsAPI.swift in Sources */,
+				A9A74D601C493B45006C3183 /* InstagramCVC.swift in Sources */,
 				A98CE68F1C461D380089323F /* PinterestAPI.swift in Sources */,
 				A98CE6921C461D380089323F /* UberAPI.swift in Sources */,
 			);
@@ -495,14 +527,14 @@
 				A98CE69D1C461D470089323F /* MeetupAPI.swift in Sources */,
 				A98CE6971C461D470089323F /* GoogleAnalyticsAPI.swift in Sources */,
 				A951A9071C4536930037CDF1 /* ItunesTests.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* GithubTests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* GitHubTests.swift in Sources */,
 				A98CE69C1C461D470089323F /* MarvelAPI.swift in Sources */,
 				A98CE69B1C461D470089323F /* LinkedIn.swift in Sources */,
 				A98CE6981C461D470089323F /* GoogleMapsAPI.swift in Sources */,
 				A951A9051C45344A0037CDF1 /* Keys.swift in Sources */,
 				A98CE6A11C461D470089323F /* UberAPI.swift in Sources */,
 				A98CE69E1C461D470089323F /* PinterestAPI.swift in Sources */,
-				A98CE6961C461D470089323F /* GithubAPI.swift in Sources */,
+				A98CE6961C461D470089323F /* GitHubAPI.swift in Sources */,
 				A98CE6941C461D470089323F /* FlickrAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
