@@ -12,6 +12,7 @@ RESTful API endpoint manager
 
 ## Roadmap
 
+
 #### APIs
 
 - [x] ~~Done~~
@@ -22,21 +23,26 @@ RESTful API endpoint manager
 
 **Please submit an issue if you would like a lead position for any (listed/unlisted) API**
 
---- 
+--
 
-- [ ] Flickr : [Docs](https://www.flickr.com/services/api/)
 - [x] ~~Foursquare~~ : [Docs](https://developer.foursquare.com) : [File](APIs/FoursquareAPI.swift) : [Jo Albright](https://github.com/joalbright)
-- [ ] ***Github*** : [Docs](https://developer.github.com/v3/) : [Jo Albright](https://github.com/joalbright)
 - [x] ~~Instagram~~ : [Docs](https://www.instagram.com/developer/) : [File](APIs/InstagramAPI.swift) : [Jo Albright](https://github.com/joalbright)
 - [x] ~~iTunes~~ : [Docs](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) : [File](APIs/ItunesAPI.swift) : [Jo Albright](https://github.com/joalbright)
-- [ ] LinkedIn : [Docs](https://developer.linkedin.com/docs)
 - [x] ~~Marvel~~ : [Docs](http://developer.marvel.com) : [File](APIs/MarvelAPI.swift) : [Paul Vagner](https://github.com/PaulVagner)
+
+--
+
+- [ ] Flickr : [Docs](https://www.flickr.com/services/api/)
+- [ ] ***Github*** : [Docs](https://developer.github.com/v3/) : [Jo Albright](https://github.com/joalbright)
+- [ ] LinkedIn : [Docs](https://developer.linkedin.com/docs)
 - [ ] Meetup : [Docs](http://www.meetup.com/meetup_api/)
 - [ ] Pinterest : [Docs](https://developers.pinterest.com)
 - [ ] Slack : [Docs](https://api.slack.com)
 - [ ] Twitter : [Docs](https://dev.twitter.com/overview/documentation)
 - [ ] Uber : [Docs](https://developer.uber.com)
 - [ ] Youtube : [Docs](https://developers.google.com/youtube/)
+
+--
 
 **API Groups**
 
@@ -47,6 +53,8 @@ RESTful API endpoint manager
 	- [ ] Graph API : [Docs](https://developers.facebook.com/docs/graph-api)
 
 **Please submit an issue for any APIs you would like to see added.**
+
+---
 
 #### Features
 
