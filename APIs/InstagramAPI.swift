@@ -13,41 +13,108 @@ import Relax
 
 // Documentation : https://www.instagram.com/developer/
 
-public class InstagramAPI: StarterAPI {
+private let _ig = InstagramAPI()
+
+public class InstagramAPI: API {
+    
+    public override class func session() -> InstagramAPI { return _ig }
+    
+    public override func start() {
+        
+        baseURL = "https://api.instagram.com/v1/"
+        authURL = "https://api.instagram.com/oauth/"
+        authHeader = "Authorization"
+        authTokenKey = "Instagram"
+        authBasic = [
+            
+            "client_id" : INSTAGRAM_CLIENT_ID,
+            "client_secret" : INSTAGRAM_CLIENT_SECRET,
+            "access_token":"ACCESS_TOKEN"
+        
+        ]
+        
+    }
+    
+    public override func loginDetails() -> (auth: Endpoint, authCode: Endpoint) {
+        
+        var auth = Endpoints.Auth.endpoint
+        
+        auth.parameters = [
+            
+            "client_id" : INSTAGRAM_CLIENT_ID,
+            "response_type" : "code",
+            "redirect_uri" : "https://code.jo2.co"
+            
+        ]
+        
+        var authCode = Endpoints.AuthCode.endpoint
+        
+        authCode.parameters = [
+            
+            "client_id" : INSTAGRAM_CLIENT_ID,
+            "client_secret" : INSTAGRAM_CLIENT_SECRET,
+            "redirect_uri" : "https://code.jo2.co",
+            "grant_type" : "authorization_code"
+            
+        ]
+        
+        return (auth, authCode)
+        
+    }
     
     public enum Endpoints: String {
 
         // Auth
         
-        case Auth, AuthCode
+        case Auth
+        case AuthCode
         
         // Users
         
-        case Users, UsersMe, UsersMedia, UsersMyMedia, UsersMyMediaLiked, UsersSearch
+        case Users
+        case UsersMe
+        case UsersMedia
+        case UsersMyMedia
+        case UsersMyMediaLiked
+        case UsersSearch
         
         // Relationships
         
-        case UsersMyFollows, UsersMyFollowers, UsersRequestedFollow, UsersRelationship, UsersSetRelationship
+        case UsersMyFollows
+        case UsersMyFollowers
+        case UsersRequestedFollow
+        case UsersRelationship
+        case UsersSetRelationship
         
         // Media
         
-        case Media, MediaShortcode, MediaSearch
+        case Media
+        case MediaShortcode
+        case MediaSearch
         
         // Comments
         
-        case MediaComments, MediaCommentsAdd, MediaCommentsDelete
+        case MediaComments
+        case MediaCommentsAdd
+        case MediaCommentsDelete
         
         // Likes
         
-        case MediaLikes, MediaLikesAdd, MediaLikesDelete
+        case MediaLikes
+        case MediaLikesAdd
+        case MediaLikesDelete
         
         // Tags
         
-        case Tags, TagsMedia, TagsSearch
+        case Tags
+        case TagsMedia
+        case TagsSearch
         
         // Locations
         
-        case Locations, LocationsMedia, LocationsSearch
+        case Locations
+        case LocationsMedia
+        case LocationsSearch
         
         
         public var endpoint: Endpoint { return _endpoints[self]! }
@@ -59,7 +126,7 @@ public class InstagramAPI: StarterAPI {
                 // Auth
                 
                 .Auth : Endpoint(path: "authorize", requiredParameters: ["client_id","response_type","redirect_uri"]),
-                .AuthCode : Endpoint(path: "access_token", requiredParameters: ["client_id","client_secret","grant_type","redirect_uri","code"]),
+                .AuthCode : Endpoint(path: "access_token", method: .POST, requiredParameters: ["client_id","client_secret","grant_type","redirect_uri","code"]),
             
                 // Users
                 
