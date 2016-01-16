@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bSs-W9-CIb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Relax-->
@@ -165,18 +166,48 @@
         <scene sceneID="eUt-94-DBm">
             <objects>
                 <tableViewController id="tH2-g9-Mnk" customClass="MarvelTVC" customModule="Relax_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TMs-3P-02J">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="TMs-3P-02J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mlf-kT-sBr">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CharacterCell" id="mlf-kT-sBr" customClass="CharacterCell" customModule="Relax_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mlf-kT-sBr" id="3SB-4z-4td">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wTG-E2-O6m">
+                                            <rect key="frame" x="10" y="10" width="79.5" height="79.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="wTG-E2-O6m" secondAttribute="height" multiplier="1:1" id="LUT-mg-fZl"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2S-DD-49w">
+                                            <rect key="frame" x="109.5" y="0.0" width="265.5" height="99.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="F2S-DD-49w" secondAttribute="bottom" id="Dvn-6o-594"/>
+                                        <constraint firstAttribute="trailing" secondItem="F2S-DD-49w" secondAttribute="trailing" id="H5f-tI-HNa"/>
+                                        <constraint firstItem="F2S-DD-49w" firstAttribute="top" secondItem="3SB-4z-4td" secondAttribute="top" id="Iz4-Xo-X3P"/>
+                                        <constraint firstItem="wTG-E2-O6m" firstAttribute="leading" secondItem="3SB-4z-4td" secondAttribute="leading" constant="10" id="Qo5-tg-E86"/>
+                                        <constraint firstAttribute="bottom" secondItem="wTG-E2-O6m" secondAttribute="bottom" constant="10" id="XYj-Sw-jzU"/>
+                                        <constraint firstItem="wTG-E2-O6m" firstAttribute="top" secondItem="3SB-4z-4td" secondAttribute="top" constant="10" id="dJf-TB-A7A"/>
+                                        <constraint firstItem="F2S-DD-49w" firstAttribute="leading" secondItem="wTG-E2-O6m" secondAttribute="trailing" constant="20" id="zL3-rG-9Co"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="characterImageView" destination="wTG-E2-O6m" id="8Vh-8C-gDy"/>
+                                    <outlet property="characterNameLabel" destination="F2S-DD-49w" id="xbf-T7-ZoI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

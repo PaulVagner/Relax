@@ -1,0 +1,6 @@
+framework module Pods_Relax_Tests {
+  umbrella header "Pods-Relax_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

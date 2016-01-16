@@ -62,6 +62,11 @@ RESTful API endpoint manager
 - [x] ~~Authentication Structure~~ *docs coming soon*
 - [ ] AlamoFire Support (other?)
 
+![APIs](images/APIs.png)
+![Marvel](images/Marvel.png)
+![Foursquare](images/Foursquare.png)
+![iTunes](images/iTunes.png)
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

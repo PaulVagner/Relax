@@ -40,8 +40,7 @@ class FoursquareVC: UIViewController {
         
         FoursquareAPI.session().request(explore) {
                         
-            guard let info = $0.info as? [String:AnyObject] else { return }
-            guard let response = info["response"] as? [String:AnyObject] else { return }
+            guard let response = $0.info?["response"] as? [String:AnyObject] else { return }
             guard let groups = response["groups"] as? [[String:AnyObject]] else { return }
             
             for group in groups {

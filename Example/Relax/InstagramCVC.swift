@@ -34,11 +34,20 @@ class InstagramCVC: UICollectionViewController {
     
     func loadMedia() {
         
-        let media = InstagramAPI.Endpoints.UsersMyMedia.endpoint
+        var media = InstagramAPI.Endpoints.UsersMyMedia.endpoint
+        
+        // 1117765869475060984_6261910
+        //  970209583255379454_6261910
+        
+        media.parameters = ["count" : "50"]
         
         InstagramAPI.session().request(media) {
          
+            print($0.info)
+            
             guard let items = $0.info?["data"] as? [[String:AnyObject]] else { return }
+            
+            
             
             self.photos = items.filter { $0["type"] as? String == "image" }
             self.collectionView?.reloadData()
@@ -55,7 +64,7 @@ class InstagramCVC: UICollectionViewController {
     
         let photo = photos[indexPath.item]
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
             
             guard let urlString = photo["images"]??["standard_resolution"]??["url"] as? String else { return }
             guard let url = NSURL(string: urlString) else { return }

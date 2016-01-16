@@ -9,7 +9,7 @@
 
 import Foundation
 import Relax
-
+import CryptoSwift
 
 // Documentation : http://developer.marvel.com
 
@@ -19,15 +19,18 @@ public class MarvelAPI: API {
     
     public override class func session() -> MarvelAPI { return _m }
     
+    var ts: String { return "\(Int(NSDate().timeIntervalSince1970))" }
+    var hash: String { return "\(ts)\(MARVEL_CLIENT_SECRET)\(MARVEL_CLIENT_ID)".md5() }
+    
     public override func start() {
         
-        baseURL = "https://gateway.marvel.com/"
+        baseURL = "https://gateway.marvel.com/v1/public/"
         authTokenKey = "Marvel"
         authBasic = [
             
-            "client_id" : MARVEL_CLIENT_ID,
-            "client_secret" : MARVEL_CLIENT_SECRET,
-            "access_token":"ACCESS_TOKEN"
+            "apikey" : MARVEL_CLIENT_ID,
+            "ts" : ts,
+            "hash" : hash
             
         ]
         
