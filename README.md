@@ -62,10 +62,10 @@ RESTful API endpoint manager
 - [x] ~~Authentication Structure~~ *docs coming soon*
 - [ ] AlamoFire Support (other?)
 
-![APIs](images/APIs.png)
-![Marvel](images/Marvel.png)
-![Foursquare](images/Foursquare.png)
-![iTunes](images/iTunes.png)
+![APIs](./Images/APIs.png)
+![Marvel](./Images/Marvel.png)
+![Foursquare](./Images/Foursquare.png)
+![iTunes](./Images/iTunes.png)
 
 ## Usage
 
