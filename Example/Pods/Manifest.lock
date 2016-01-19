@@ -1,11 +1,13 @@
 PODS:
+  - CryptoSwift (0.2.2)
   - Encodable (1.0.0):
     - Inlinit (~> 0.1)
   - Inlinit (0.1.2)
-  - Relax (0.1.1):
+  - Relax (1.1.0):
     - Encodable (~> 1.0.0)
 
 DEPENDENCIES:
+  - CryptoSwift
   - Relax (from `../`)
 
 EXTERNAL SOURCES:
@@ -13,8 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  CryptoSwift: d382228d6301c09474132417878a741c2a2e68cd
   Encodable: ef3db73a859d522ea0138fea147462ba9fab573a
   Inlinit: 6016cbe884ee0a239607246737a668012074700e
-  Relax: 38c840131a85fe7253adc7ed30ffe36e3f6ed8dc
+  Relax: 5ec6a6b40aa68efc262aa420371655de80d8b21e
 
 COCOAPODS: 0.39.0

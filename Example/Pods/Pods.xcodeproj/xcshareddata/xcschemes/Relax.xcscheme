@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7273992FA59C573A4F136413'
+               BlueprintIdentifier = '23851826F40F91831E6A2121'
                BlueprintName = 'Relax'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Relax.framework'>

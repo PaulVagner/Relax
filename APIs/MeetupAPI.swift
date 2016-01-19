@@ -13,7 +13,7 @@ import Relax
 
 // Documentation : http://www.meetup.com/meetup_api/
 
-public class MeetupAPI: StarterAPI {
+public class MeetupAPI: API {
     
     public enum Endpoints: String {
         

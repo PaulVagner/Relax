@@ -13,7 +13,7 @@ import Relax
 
 // Documentation : https://developers.pinterest.com
 
-public class PinterestAPI: StarterAPI {
+public class PinterestAPI: API {
     
     public enum Endpoints: String {
         

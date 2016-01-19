@@ -13,7 +13,7 @@ import Relax
 
 // Documentation : https://api.slack.com
 
-public class SlackAPI: StarterAPI {
+public class SlackAPI: API {
     
     public enum Endpoints: String {
         
