@@ -11,9 +11,11 @@
 import Foundation
 import Inlinit
 
-public class StarterAPI: Defaultable, Inlinit {
+private let _s = API()
+
+public class API: Defaultable, Inlinit {
     
-    public static var session = StarterAPI()
+    public class func session() -> API { return _s }
     
     public var baseURL: String = ""
     public var authURL: String = ""
@@ -29,7 +31,6 @@ public class StarterAPI: Defaultable, Inlinit {
         
     }
     
-    
     public enum RequestLibraries {
         
         case Relax
@@ -41,25 +42,29 @@ public class StarterAPI: Defaultable, Inlinit {
     
     public required init() { }
     
-    public func request(endpoint: Endpoint, response: Response) {
+    public func url(endpoint: Endpoint) throws -> String {
         
-        switch requestLibrary {
-            
-        case .Relax :
-            
-            Relax.request(endpoint, response: response, api: self)
-            
-        case .AlamoFire :
-            
-            print("TODO: Add AlamoFire")
-            
-        }
+        return try Relax.url(endpoint, api: self)
         
     }
     
-    public func start(@noescape c: StarterAPI -> Void) -> Self {
+    public func request(endpoint: Endpoint, response: Response) {
+        
+        Relax.request(endpoint, response: response, api: self)
+        
+    }
+    
+    public func start() { }
+    
+    public func update(@noescape c: API -> Void) -> Self {
         
         c(self); return self
+        
+    }
+    
+    public func loginDetails() -> (auth: Endpoint, authCode: Endpoint) {
+        
+        return (Endpoint(path: ""), Endpoint(path: ""))
         
     }
     

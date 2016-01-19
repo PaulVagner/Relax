@@ -13,7 +13,7 @@ import Relax
 
 // Documentation : https://developers.google.com/maps/
 
-public class GoogleMapsAPI: StarterAPI {
+public class GoogleMapsAPI: API {
     
     public enum Endpoints: String {
         

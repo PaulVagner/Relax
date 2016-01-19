@@ -13,69 +13,224 @@ import Relax
 
 // Documentation : https://developer.foursquare.com
 
-public class FoursquareAPI: StarterAPI {
+private let _fs = FoursquareAPI()
+
+public class FoursquareAPI: API {
+    
+    public override class func session() -> FoursquareAPI { return _fs }
+    
+    public override func start() {
+        
+        baseURL = "https://api.foursquare.com/v2/"
+        authURL = "https://foursquare.com/oauth2/"
+        authTokenKey = "Foursquare"
+        authBasic = [
+            
+            "client_id" : FOURSQUARE_CLIENT_ID,
+            "client_secret" : FOURSQUARE_CLIENT_SECRET,
+            "access_token" : "ACCESS_TOKEN",
+            "v" : "20160112"
+            
+        ]
+        
+    }
+    
+    public override func loginDetails() -> (auth: Endpoint, authCode: Endpoint) {
+        
+        var auth = Endpoints.Auth.endpoint
+        
+        auth.parameters = [
+            
+            "client_id" : FOURSQUARE_CLIENT_ID,
+            "response_type" : "code",
+            "redirect_uri" : "https://code.jo2.co"
+            
+        ]
+        
+        var authCode = Endpoints.AuthCode.endpoint
+        
+        authCode.parameters = [
+            
+            "client_id" : FOURSQUARE_CLIENT_ID,
+            "client_secret" : FOURSQUARE_CLIENT_SECRET,
+            "redirect_uri" : "https://code.jo2.co",
+            "grant_type" : "authorization_code"
+            
+        ]
+
+        return (auth, authCode)
+        
+    }
     
     public enum Endpoints: String {
         
         // Auth
         
-        case Auth, AuthCode
+        case Auth
+        case AuthCode
         
         // Users
         
-        case Users, UsersRequests, UsersSearch, UsersCheckins, UsersFriends, UsersLists, UsersMayorships, UsersPhotos, UsersTastes, UsersVenueHistory, UsersVenueLikes, UsersApprove, UsersDeny, UsersSetPings, UsersUnfriend, UsersUpdate
+        case Users
+        case UsersRequests
+        case UsersSearch
+        case UsersCheckins
+        case UsersFriends
+        case UsersLists
+        case UsersMayorships
+        case UsersPhotos
+        case UsersTastes
+        case UsersVenueHistory
+        case UsersVenueLikes
+        case UsersApprove
+        case UsersDeny
+        case UsersSetPings
+        case UsersUnfriend
+        case UsersUpdate
         
         // Venues
         
-        case Venues, VenuesAdd, VenuesCategories, VenuesExplore, VenuesManaged, VenuesSearch, VenuesSuggestedCompletion, VenuesTimeSeries, VenuesTrending, VenuesEvents, VenuesHereNow, VenuesHours, VenuesLikes, VenuesLinks, VenuesListed, VenuesMenu, VenuesNextVenues, VenuesPhotos, VenuesSimilar, VenuesStats, VenuesTips, VenuesClaim, VenuesDislike, VenuesFlag, VenuesLike, VenuesProposeEdit, VenuesSetRole, VenuesSetSingleLocation
+        /// Get venue by :venue_id
+        case Venues
+        /// Add new venue
+        case VenuesAdd
+        case VenuesCategories
+        /// Explore suggested venues using "near" or "ll"
+        case VenuesExplore
+        case VenuesManaged
+        /// Search all venues using "near" or "ll"
+        case VenuesSearch
+        case VenuesSuggestedCompletion
+        case VenuesTimeSeries
+        case VenuesTrending
+        case VenuesEvents
+        case VenuesHereNow
+        case VenuesHours
+        case VenuesLikes
+        case VenuesLinks
+        case VenuesListed
+        case VenuesMenu
+        case VenuesNextVenues
+        case VenuesPhotos
+        case VenuesSimilar
+        case VenuesStats
+        case VenuesTips
+        case VenuesClaim
+        case VenuesDislike
+        case VenuesFlag
+        case VenuesLike
+        case VenuesProposeEdit
+        case VenuesSetRole
+        case VenuesSetSingleLocation
         
         // Venue Groups
         
-        case VenueGroups, VenueGroupsAdd, VenueGroupsDelete, VenueGroupsList, VenueGroupsTimeSeries, VenueGroupsAddVenue, VenueGroupsEdit, VenueGroupsRemoveVenue, VenueGroupsUpdate
+        case VenueGroups
+        case VenueGroupsAdd
+        case VenueGroupsDelete
+        case VenueGroupsList
+        case VenueGroupsTimeSeries
+        case VenueGroupsAddVenue
+        case VenueGroupsEdit
+        case VenueGroupsRemoveVenue
+        case VenueGroupsUpdate
         
         // Checkins
         
-        case Checkins, CheckinsAdd, CheckinsRecent, CheckinsResolve, CheckinsLikes, CheckinsAddComment, CheckinsAddPost, CheckinsDeleteComment, CheckinsLike
+        case Checkins
+        case CheckinsAdd
+        case CheckinsRecent
+        case CheckinsResolve
+        case CheckinsLikes
+        case CheckinsAddComment
+        case CheckinsAddPost
+        case CheckinsDeleteComment
+        case CheckinsLike
         
         // Tips
         
-        case Tips, TipsAdd, TipsLikes, TipsListed, TipsSaves, TipsFlag, TipsLike, TipsUnmark
+        case Tips
+        case TipsAdd
+        case TipsLikes
+        case TipsListed
+        case TipsSaves
+        case TipsFlag
+        case TipsLike
+        case TipsUnmark
         
         // Lists
         
-        case Lists, ListsAdd, ListsFollowers, ListsItems, ListsSaves, ListsSuggestPhoto, ListsSuggestTip, ListsSuggestVenues, ListsAddItem, ListsDeleteItem, ListsFollow, ListsMoveItem, ListsShare, ListsUnfollow, ListsUpdate, ListsUpdateItem
+        case Lists
+        case ListsAdd
+        case ListsFollowers
+        case ListsItems
+        case ListsSaves
+        case ListsSuggestPhoto
+        case ListsSuggestTip
+        case ListsSuggestVenues
+        case ListsAddItem
+        case ListsDeleteItem
+        case ListsFollow
+        case ListsMoveItem
+        case ListsShare
+        case ListsUnfollow
+        case ListsUpdate
+        case ListsUpdateItem
         
         // Updates
         
-        case Updates, UpdatesNotifications, UpdatesMarkNotificationsRead
+        case Updates
+        case UpdatesNotifications
+        case UpdatesMarkNotificationsRead
         
         // Photos
         
-        case Photos, PhotosAdd
+        case Photos
+        case PhotosAdd
         
         // Settings
         
-        case Settings, SettingsAll, SettingsSet
+        case Settings
+        case SettingsAll
+        case SettingsSet
         
         // Specials
         
-        case Specials, SpecialsAdd, SpecialsList, SpecialsSearch, SpecialsFlag
+        case Specials
+        case SpecialsAdd
+        case SpecialsList
+        case SpecialsSearch
+        case SpecialsFlag
         
         // Events
         
-        case Events, EventsCategories, EventsSearch, EventsAdd
+        case Events
+        case EventsCategories
+        case EventsSearch
+        case EventsAdd
         
         // Pages
         
-        case PagesAdd, PagesManaging, PagesAccess, PagesSimilar, PagesTimeSeries, PagesVenues, PagesFollow
+        case PagesAdd
+        case PagesManaging
+        case PagesAccess
+        case PagesSimilar
+        case PagesTimeSeries
+        case PagesVenues
+        case PagesFollow
         
         // Page Updates
         
-        case PageUpdates, PageUpdatesAdd, PageUpdatesList, PageUpdatesDelete, PageUpdatesLike
+        case PageUpdates
+        case PageUpdatesAdd
+        case PageUpdatesList
+        case PageUpdatesDelete
+        case PageUpdatesLike
         
         // Multi
         
-        case MultiGET, MultiPOST
+        case MultiGET
+        case MultiPOST
         
         
         

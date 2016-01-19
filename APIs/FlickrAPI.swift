@@ -13,7 +13,7 @@ import Relax
 
 // Documentation : https://www.flickr.com/services/api/
 
-public class FlickerAPI: StarterAPI {
+public class FlickerAPI: API {
     
     public enum Endpoints: String {
 

@@ -13,7 +13,7 @@ import Relax
 
 // Documentation : https://dev.twitter.com/overview/documentation
 
-public class TwitterAPI: StarterAPI {
+public class TwitterAPI: API {
     
     public enum Endpoints: String {
         

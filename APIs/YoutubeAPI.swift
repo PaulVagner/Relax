@@ -13,7 +13,7 @@ import Relax
 
 // Documentation : https://developers.google.com/youtube/
 
-public class YoutubeAPI: StarterAPI {
+public class YoutubeAPI: API {
     
     public enum Endpoints: String {
         

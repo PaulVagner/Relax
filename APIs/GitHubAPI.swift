@@ -13,33 +13,127 @@ import Relax
 
 // Documentation : https://developer.github.com/v3/
 
-public class GithubAPI: StarterAPI {
+private let _gh = GitHubAPI()
+
+public class GitHubAPI: API {
+    
+    public override class func session() -> GitHubAPI { return _gh }
+    
+    public override func start() {
+        
+        baseURL = "https://api.github.com/"
+        authURL = "https://github.com/login/oauth/"
+        authTokenKey = "Github"
+        authBasic = [
+            
+            "client_id" : GITHUB_CLIENT_ID,
+            "client_secret" : GITHUB_CLIENT_SECRET,
+            "access_token" : "ACCESS_TOKEN"
+            
+        ]
+        
+    }
+    
+    public override func loginDetails() -> (auth: Endpoint, authCode: Endpoint) {
+        
+        var auth = Endpoints.Auth.endpoint
+        
+        auth.parameters = [
+            
+            "client_id" : GITHUB_CLIENT_ID,
+            "response_type" : "code",
+            "redirect_uri" : "https://code.jo2.co",
+            "scope" : "user,public_repo",
+            "state" : "thisisawesome"
+            
+        ]
+        
+        var authCode = Endpoints.AuthCode.endpoint
+        
+        authCode.parameters = [
+            
+            "client_id" : GITHUB_CLIENT_ID,
+            "client_secret" : GITHUB_CLIENT_SECRET,
+            "redirect_uri" : "https://code.jo2.co",
+            "state" : "thisisawesome"
+            
+        ]
+        
+        return (auth, authCode)
+        
+        
+    }
     
     public enum Endpoints: String {
         
         // Auth
         
-        case Auth, AuthCode
+        case Auth
+        case AuthCode
         
         // Events
         
-        case Events, EventsRepo, EventsRepoIssues, EventsRepoNetworks, EventsOrg, EventsUserReceived, EventsUserReceivedPublic, EventsUserPerformed, EventsUserPerformedPublic, EventsUserOrg
+        case Events
+        case EventsRepo
+        case EventsRepoIssues
+        case EventsRepoNetworks
+        case EventsOrg
+        case EventsUserReceived
+        case EventsUserReceivedPublic
+        case EventsUserPerformed
+        case EventsUserPerformedPublic
+        case EventsUserOrg
         
         // Notifications
         
-        case Notifications, NotificationsMarkRead, NotificationsRepo, NotificationsRepoMarkRead, NotificationsThread, NotificationsThreadMarkRead, NotificationsThreadSubscription, NotificationsThreadSetSubscription, NotificationsThreadDeleteSubscription
+        case Notifications
+        case NotificationsMarkRead
+        case NotificationsRepo
+        case NotificationsRepoMarkRead
+        case NotificationsThread
+        case NotificationsThreadMarkRead
+        case NotificationsThreadSubscription
+        case NotificationsThreadSetSubscription
+        case NotificationsThreadDeleteSubscription
         
         // Stars
         
-        case StarsRepoStarGazers, StarsUserStarred, StarsMeStarred, StarsRepoCheck, StarsRepoStar, StarsRepoUnstar
+        case StarsRepoStarGazers
+        case StarsUserStarred
+        case StarsMeStarred
+        case StarsRepoCheck
+        case StarsRepoStar
+        case StarsRepoUnstar
         
         // Watch
         
-        case WatchRepoWatchers, WatchUserWatching, WatchMeWatching, WatchRepoSubscription, WatchRepoSetSubscription, WatchRepoDeleteSubscription, WatchRepoCheck, WatchRepoWatch, WatchRepoUnwatch
+        case WatchRepoWatchers
+        case WatchUserWatching
+        case WatchMeWatching
+        case WatchRepoSubscription
+        case WatchRepoSetSubscription
+        case WatchRepoDeleteSubscription
+        case WatchRepoCheck
+        case WatchRepoWatch
+        case WatchRepoUnwatch
         
         // Gists
         
-        case Gists, GistsUser, GistsMe, GistsMeStarred, Gist, GistRevision, GistCreate, GistEdit, GistDelete, GistCommits, GistCheck, GistStar, GistUnstar, GistFork, GistForks
+        case Gists
+        case GistsUser
+        case GistsMe
+        case GistsMeStarred
+        case Gist
+        case GistRevision
+        case GistCreate
+        case GistEdit
+        case GistDelete
+        case GistCommits
+        case GistCheck
+        case GistStar
+        case GistUnstar
+        case GistFork
+        case GistForks
         
         // Git Data
         
@@ -55,11 +149,28 @@ public class GithubAPI: StarterAPI {
         
         // Search
         
-        case SearchRepos, SearchCode, SearchIssues, SearchUsers
+        case SearchRepos
+        case SearchCode
+        case SearchIssues
+        case SearchUsers
         
         // User
         
-        case Users, UsersNamed, UsersMe, UsersMeUpdate, UsersMeEmails, UsersMeEmailsAdd, UsersMeEmailsDelete, UsersFollowers, UsersMeFollowers, UsersFollowing, UsersMeFollowing, UsersFollowingUserCheck, UsersMeFollowingUserCheck, UsersMeFollowUser, UsersMeUnfollowUser
+        case Users
+        case UsersNamed
+        case UsersMe
+        case UsersMeUpdate
+        case UsersMeEmails
+        case UsersMeEmailsAdd
+        case UsersMeEmailsDelete
+        case UsersFollowers
+        case UsersMeFollowers
+        case UsersFollowing
+        case UsersMeFollowing
+        case UsersFollowingUserCheck
+        case UsersMeFollowingUserCheck
+        case UsersMeFollowUser
+        case UsersMeUnfollowUser
         
         
         
